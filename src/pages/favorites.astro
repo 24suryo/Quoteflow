@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FavoritesView from '../components/FavoritesView.astro';
+---
+
+<BaseLayout
+  title="Favorites & History — QuoteFlow"
+  description="View your saved favorite quotes and recently viewed history."
+  locale="en"
+  alternateUrl="/id/favorites/"
+>
+  <FavoritesView locale="en" />
+</BaseLayout>

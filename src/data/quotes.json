@@ -1,0 +1,2384 @@
+[
+  {
+    "id": "qf-001",
+    "slug": {
+      "en": "journey-of-a-thousand-miles",
+      "id": "perjalanan-seribu-mil-dimulai-satu-langkah"
+    },
+    "content": {
+      "en": "A journey of a thousand miles begins with a single step.",
+      "id": "Perjalanan seribu mil dimulai dengan satu langkah pertama."
+    },
+    "authorId": "lao-tzu",
+    "categoryId": "motivation",
+    "tags": ["beginnings", "action", "clarity"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikisource.org/wiki/Tao_Te_Ching_(Legge)/Chapter_64",
+    "interpretation": {
+      "en": "Focus on the immediate step rather than feeling overwhelmed by the distance.",
+      "id": "Fokuslah pada langkah terdekat alih-alih kewalahan membayangkan seluruh jarak."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-002",
+    "slug": {
+      "en": "start-before-the-mood-arrives",
+      "id": "mulai-sebelum-suasana-hati-datang"
+    },
+    "content": {
+      "en": "Start the small task before the mood arrives; action often invites the feeling.",
+      "id": "Mulailah tugas kecil sebelum suasana hati datang; tindakan sering kali memancing rasa tersebut."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["momentum", "action", "habits"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Waiting to feel inspired delays progress; gentle motion builds readiness.",
+      "id": "Menunggu munculnya inspirasi sering menunda langkah; gerak kecil menumbuhkan kesiapan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-003",
+    "slug": {
+      "en": "one-honest-hour-changes-the-day",
+      "id": "satu-jam-yang-jujur-mengubah-hari"
+    },
+    "content": {
+      "en": "One honest hour of focused work can shift the momentum of an entire week.",
+      "id": "Satu jam kerja terfokus yang jujur dapat mengubah arah momentum sepanjang pekan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["focus", "momentum", "daily"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "You do not need ten perfect hours to recover direction—one clear block helps.",
+      "id": "Anda tidak butuh sepuluh jam sempurna untuk kembali terarah—satu blok fokus sudah membantu."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-004",
+    "slug": {
+      "en": "keep-the-spark-close-to-your-purpose",
+      "id": "jaga-bara-tetap-dekat-dengan-tujuan"
+    },
+    "content": {
+      "en": "Keep your daily effort anchored to why the work matters, not just how fast it moves.",
+      "id": "Jaga upaya harian tetap tertambat pada alasan karya itu penting, bukan sekadar kecepatannya."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["purpose", "drive", "clarity"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Purpose sustains energy when novelty wears off.",
+      "id": "Tujuan menjaga energi bertahan saat rasa baru mulai memudar."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-005",
+    "slug": {
+      "en": "done-beats-waiting-for-ideal-conditions",
+      "id": "selesai-mengalahkan-menunggu-kondisi-ideal"
+    },
+    "content": {
+      "en": "An imperfect step taken today does more than a flawless plan left on paper.",
+      "id": "Langkah yang belum sempurna hari ini lebih bermakna daripada rencana mulus di atas kertas."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["execution", "progress", "action"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Real movement creates feedback that planning alone cannot supply.",
+      "id": "Gerakan nyata memberi umpan balik yang tidak bisa diberikan rencana saja."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-006",
+    "slug": {
+      "en": "energy-follows-clear-boundaries",
+      "id": "energi-mengikuti-batasan-yang-jelas"
+    },
+    "content": {
+      "en": "Clear limits on distractions free up energy for the work that truly counts.",
+      "id": "Batasan yang jelas terhadap distraksi membebaskan energi untuk hal yang benar-benar penting."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["boundaries", "focus", "energy"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Protecting attention is an active form of self-motivation.",
+      "id": "Melindungi perhatian adalah bentuk motivasi diri yang nyata."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-007",
+    "slug": {
+      "en": "small-wins-restore-self-trust",
+      "id": "kemenangan-kecil-memulihkan-kepercayaan-diri"
+    },
+    "content": {
+      "en": "Keep promises you make to yourself in small ways; self-trust grows from kept word.",
+      "id": "Tepati janji kecil kepada diri sendiri; kepercayaan diri tumbuh dari kata yang ditepati."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["self-trust", "confidence", "consistency"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Reliability toward yourself builds quiet confidence over time.",
+      "id": "Konsistensi pada diri sendiri menumbuhkan rasa percaya diri secara bertahap."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-008",
+    "slug": {
+      "en": "do-not-mistake-hesitation-for-inability",
+      "id": "jangan-keliru-mengira-ragu-sebagai-ketidakmampuan"
+    },
+    "content": {
+      "en": "Hesitation is often just unfamiliarity, not a lack of capacity.",
+      "id": "Keraguan sering kali hanya tanda belum terbiasa, bukan kurangnya kemampuan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["courage", "confidence", "mindset"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Familiarity comes through repeated, unhurried practice.",
+      "id": "Keterbiasaan hadir lewat latihan berulang yang tidak terburu-buru."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-009",
+    "slug": {
+      "en": "let-quiet-determination-speak",
+      "id": "biarkan-keteguhan-yang-tenang-berbicara"
+    },
+    "content": {
+      "en": "You do not need noise to prove commitment; steady effort speaks clearly enough.",
+      "id": "Anda tidak perlu riuh untuk membuktikan komitmen; usaha yang ajeg sudah berbicara jelas."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "motivation",
+    "tags": ["determination", "calm", "commitment"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Quiet consistency rarely seeks applause yet delivers lasting results.",
+      "id": "Keteguhan yang tenang jarang mencari tepuk tangan namun memberi hasil nyata."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-010",
+    "slug": {
+      "en": "luck-is-preparation-meeting-opportunity",
+      "id": "keberuntungan-adalah-persiapan-dan-kesempatan"
+    },
+    "content": {
+      "en": "Luck is what happens when preparation meets opportunity.",
+      "id": "Keberuntungan adalah apa yang terjadi ketika persiapan bertemu dengan kesempatan."
+    },
+    "authorId": "seneca",
+    "categoryId": "success",
+    "tags": ["preparation", "opportunity", "success"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikiquote.org/wiki/Seneca_the_Younger",
+    "interpretation": {
+      "en": "Readiness turns sudden openings into meaningful outcomes.",
+      "id": "Kesiapan mengubah peluang tak terduga menjadi hasil yang bermakna."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-011",
+    "slug": {
+      "en": "success-is-built-where-nobody-watches",
+      "id": "kesuksesan-dibangun-saat-tidak-ada-yang-melihat"
+    },
+    "content": {
+      "en": "Lasting success is rarely born on stage; it is shaped in ordinary, uncelebrated hours.",
+      "id": "Kesuksesan yang bertahan jarang lahir di panggung; ia terbentuk di jam-jam biasa yang tak terlihat."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["craft", "patience", "success"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Behind every visible milestone is quiet, repetitive preparation.",
+      "id": "Di balik setiap pencapaian yang terlihat ada persiapan sunyi yang berulang."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-012",
+    "slug": {
+      "en": "define-success-on-your-own-terms",
+      "id": "definisikan-sukses-menurut-ukuranmu-sendiri"
+    },
+    "content": {
+      "en": "Borrowing someone else's finish line guarantees you will feel behind.",
+      "id": "Meminjam garis finis orang lain hampir pasti membuat Anda merasa selalu tertinggal."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["purpose", "clarity", "success"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "True success aligns with your values, season of life, and responsibilities.",
+      "id": "Kesuksesan sejati selaras dengan nilai hidup, fase waktu, dan tanggung jawab Anda."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-013",
+    "slug": {
+      "en": "patience-is-the-hidden-pillar-of-mastery",
+      "id": "kesabaran-adalah-tiang-tersembunyi-keahlian"
+    },
+    "content": {
+      "en": "Rushing a craft often leaves fragile foundations; patience gives depth time to form.",
+      "id": "Memburu hasil sering meninggalkan fondasi rapuh; kesabaran memberi ruang bagi kedalaman."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["patience", "mastery", "craft"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Depth takes time that shortcuts cannot compress.",
+      "id": "Kedalaman butuh waktu yang tidak bisa dipangkas oleh jalan pintas."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-014",
+    "slug": {
+      "en": "measure-progress-in-months-not-hours",
+      "id": "ukur-kemajuan-dalam-bulan-bukan-jam"
+    },
+    "content": {
+      "en": "Judge your trajectory across seasons rather than panicking over a single slow day.",
+      "id": "Nilai arah gerak Anda lintas waktu alih-alih panik karena satu hari yang lambat."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["perspective", "long-term", "success"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Long-horizon thinking reduces unnecessary anxiety over daily fluctuations.",
+      "id": "Cara pandang jangka panjang mengurangi kecemasan akibat naik-turun harian."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-015",
+    "slug": {
+      "en": "integrity-protects-what-speed-builds",
+      "id": "integritas-menjaga-apa-yang-dibangun-kecepatan"
+    },
+    "content": {
+      "en": "Shortcut gains fade fast when they cost your credibility and peace of mind.",
+      "id": "Hasil instan cepat pudar bila mengorbankan kredibilitas dan ketenangan batin."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["integrity", "trust", "reputation"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Trust is slow to earn and fast to lose.",
+      "id": "Kepercayaan lambat diraih dan mudah hilang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-016",
+    "slug": {
+      "en": "solve-real-problems-with-care",
+      "id": "pecahkan-masalah-nyata-dengan-kepedulian"
+    },
+    "content": {
+      "en": "Work that eases someone's burden naturally earns lasting value.",
+      "id": "Karya yang meringankan beban orang lain secara alami memiliki nilai yang bertahan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["value", "service", "impact"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Utility grounded in care outlasts mere hype.",
+      "id": "Manfaat yang lahir dari kepedulian bertahan lebih lama daripada sekadar sorotan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-017",
+    "slug": {
+      "en": "stay-curious-even-after-a-win",
+      "id": "tetap-penasaran-bahkan-setelah-berhasil"
+    },
+    "content": {
+      "en": "Treat every milestone as a new starting line rather than a reason to stop learning.",
+      "id": "Perlakukan setiap capaian sebagai garis mulai baru, bukan alasan untuk berhenti belajar."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["curiosity", "learning", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Complacency is the quietest threat to continued achievement.",
+      "id": "Rasa cepat puas adalah ancaman paling sunyi bagi keberlanjutan prestasi."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-018",
+    "slug": {
+      "en": "true-achievement-leaves-room-to-breathe",
+      "id": "pencapaian-sejati-menyisakan-ruang-untuk-bernapas"
+    },
+    "content": {
+      "en": "Success that costs your health and relationships is a trade worth questioning.",
+      "id": "Keberhasilan yang mengorbankan kesehatan dan relasi patut dipertanyakan nilainya."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "success",
+    "tags": ["balance", "wellbeing", "success"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Sustainable achievement supports a whole life rather than crowding it out.",
+      "id": "Pencapaian yang sehat menopang kehidupan secara utuh, bukan menyingkirkannya."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-019",
+    "slug": {
+      "en": "impediment-to-action-advances-action",
+      "id": "hambatan-tindakan-memajukan-tindakan"
+    },
+    "content": {
+      "en": "The impediment to action advances action. What stands in the way becomes the way.",
+      "id": "Hambatan terhadap tindakan justru memajukan tindakan itu sendiri. Apa yang menghalangi jalan menjadi jalan itu sendiri."
+    },
+    "authorId": "marcus-aurelius",
+    "categoryId": "failure",
+    "tags": ["stoicism", "resilience", "obstacles"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikisource.org/wiki/The_Thoughts_of_the_Emperor_Marcus_Aurelius_Antoninus/Book_V",
+    "interpretation": {
+      "en": "Obstacles reveal where adaptation and ingenuity are needed most.",
+      "id": "Rintangan menunjukkan di mana adaptasi dan ketajaman berpikir paling dibutuhkan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-020",
+    "slug": {
+      "en": "a-setback-is-data-not-a-verdict",
+      "id": "kemunduran-adalah-data-bukan-vonis"
+    },
+    "content": {
+      "en": "A missed target is feedback on your approach, not a sentence on your worth.",
+      "id": "Target yang meleset adalah umpan balik atas cara kerja, bukan vonis atas nilai diri."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["feedback", "resilience", "mindset"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Separating identity from outcome keeps your mind clear enough to adjust.",
+      "id": "Memisahkan identitas diri dari hasil menjaga pikiran tetap jernih untuk berbenah."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-021",
+    "slug": {
+      "en": "fall-forward-with-the-lesson",
+      "id": "jatuh-ke-depan-bersama-pelajarannya"
+    },
+    "content": {
+      "en": "Do not waste a painful mistake by ignoring what it just exposed.",
+      "id": "Jangan menyia-nyiakan kesalahan yang menyakitkan dengan mengabaikan pelajaran yang tersingkap."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["lessons", "humility", "recovery"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Every misstep carries diagnostic clues if you review it calmly.",
+      "id": "Setiap kekeliruan menyimpan petunjuk berharga bila dievaluasi dengan tenang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-022",
+    "slug": {
+      "en": "courage-is-trying-again-wiser",
+      "id": "keberanian-adalah-mencoba-lagi-dengan-lebih-bijak"
+    },
+    "content": {
+      "en": "Returning to the arena wiser is quiet proof that defeat did not have the final word.",
+      "id": "Kembali melangkah dengan lebih bijak adalah bukti bahwa kegagalan tidak memegang kata akhir."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["courage", "perseverance", "failure"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Wisdom turns past stumbles into sharper judgment next time.",
+      "id": "Kebijaksanaan mengubah tersandung di masa lalu menjadi pertimbangan lebih matang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-023",
+    "slug": {
+      "en": "pride-makes-stumbles-heavier",
+      "id": "sombong-membuat-tersandung-terasa-lebih-berat"
+    },
+    "content": {
+      "en": "It is easier to recover when you can admit what went wrong without defensiveness.",
+      "id": "Lebih mudah bangkit saat kita mampu mengakui kekeliruan tanpa sikap defensif."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["humility", "honesty", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Honest reflection shortens the recovery loop.",
+      "id": "Refleksi yang jujur mempercepat proses pemulihan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-024",
+    "slug": {
+      "en": "closed-doors-redirect-attention",
+      "id": "pintu-tertutup-mengarahkan-perhatian"
+    },
+    "content": {
+      "en": "Sometimes a closed door spares you years on a road that was never yours to walk.",
+      "id": "Terkadang pintu yang tertutup menyelamatkan Anda dari bertahun-tahun di jalan yang bukan milik Anda."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["redirection", "acceptance", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Acceptance opens space to notice alternatives you might have overlooked.",
+      "id": "Penerimaan membuka ruang untuk melihat alternatif yang sempat terlewat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-025",
+    "slug": {
+      "en": "rest-after-a-loss-before-rebuilding",
+      "id": "beristirahat-setelah-gagal-sebelum-membangun-ulang"
+    },
+    "content": {
+      "en": "Give yourself a moment to steady your breath before drafting the next attempt.",
+      "id": "Beri jeda untuk menata napas sebelum menyusun percobaan berikutnya."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["recovery", "pacing", "resilience"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Clearer decisions come from steadiness rather than panic.",
+      "id": "Keputusan yang lebih jernih lahir dari ketenangan, bukan kepanikan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-026",
+    "slug": {
+      "en": "every-master-once-missed-the-mark",
+      "id": "setiap-ahli-pernah-meleset-dari-sasaran"
+    },
+    "content": {
+      "en": "Skill is built through corrections stacked over time, not instant perfection.",
+      "id": "Keterampilan terbentuk dari koreksi yang bertumpuk dari waktu ke waktu, bukan kesempurnaan instan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["practice", "skill", "failure"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Iteration is the normal rhythm of becoming capable.",
+      "id": "Iterasi adalah ritme wajar dalam proses menjadi mampu."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-027",
+    "slug": {
+      "en": "do-not-let-one-chapter-define-the-book",
+      "id": "jangan-biarkan-satu-bab-mewakili-seluruh-buku"
+    },
+    "content": {
+      "en": "One difficult season does not erase everything you have learned or can still build.",
+      "id": "Satu musim yang berat tidak menghapus semua yang telah Anda pelajari atau masih bisa bangun."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "failure",
+    "tags": ["hope", "perspective", "resilience"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "A broader timeline restores perspective during hard moments.",
+      "id": "Rentang waktu yang lebih luas mengembalikan sudut pandang saat masa sulit."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-028",
+    "slug": {
+      "en": "we-suffer-more-often-in-imagination-than-reality",
+      "id": "kita-lebih-sering-menderita-dalam-bayangan-daripada-kenyataan"
+    },
+    "content": {
+      "en": "We suffer more often in imagination than in reality.",
+      "id": "Kita lebih sering menderita dalam bayangan daripada dalam kenyataan."
+    },
+    "authorId": "seneca",
+    "categoryId": "life",
+    "tags": ["stoicism", "imagination", "life"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikiquote.org/wiki/Seneca_the_Younger",
+    "interpretation": {
+      "en": "Anxious scenarios often weigh heavier than what actually unfolds.",
+      "id": "Skenario cemas sering terasa lebih berat daripada kenyataan yang benar-benar terjadi."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-029",
+    "slug": {
+      "en": "life-happens-between-big-plans",
+      "id": "hidup-terjadi-di-sela-rencana-besar"
+    },
+    "content": {
+      "en": "Do not postpone living until every milestone is checked off; today is already here.",
+      "id": "Jangan menunda hidup hingga semua target tercapai; hari ini sudah ada di depan mata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["presence", "today", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Ordinary days hold quiet meaning worth noticing right now.",
+      "id": "Hari-hari biasa menyimpan makna tenang yang layak disadari sekarang."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-030",
+    "slug": {
+      "en": "seasons-change-even-when-the-sky-feels-heavy",
+      "id": "musim-berganti-meski-langit-terasa-mendung"
+    },
+    "content": {
+      "en": "Every season of life shifts in its own time; hold steady without losing heart.",
+      "id": "Setiap musim kehidupan berganti pada waktunya; bertahanlah dengan teguh tanpa berkecil hati."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["seasons", "change", "patience"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Change is constant, and difficult stretches eventually give way.",
+      "id": "Perubahan selalu ada, dan bagian yang berat pada akhirnya berlalu."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-031",
+    "slug": {
+      "en": "simplicity-clears-room-for-what-matters",
+      "id": "kesederhanaan-melapangkan-ruang-bagi-yang-penting"
+    },
+    "content": {
+      "en": "Letting go of non-essential noise makes room for genuine rest and focus.",
+      "id": "Melepaskan kebisingan yang tidak perlu memberi ruang bagi istirahat dan fokus yang tulus."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["simplicity", "calm", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Less clutter in schedule and mind brings greater clarity.",
+      "id": "Berkurangnya beban jadwal dan pikiran menghadirkan kejernihan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-032",
+    "slug": {
+      "en": "listen-more-than-you-rush-to-answer",
+      "id": "lebih-banyak-mendengar-daripada-buru-buru-menjawab"
+    },
+    "content": {
+      "en": "Listening fully often reveals what hurried advice misses.",
+      "id": "Mendengarkan dengan utuh sering kali menangkap hal yang terlewat oleh nasihat tergesa."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["listening", "empathy", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Presence deepens both understanding and connection.",
+      "id": "Kehadiran penuh memperdalam pemahaman sekaligus hubungan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-033",
+    "slug": {
+      "en": "gratitude-turns-enough-into-plenty",
+      "id": "rasa-syukur-mengubah-cukup-menjadi-berlimpah"
+    },
+    "content": {
+      "en": "Noticing what already supports you brings calm without needing everything at once.",
+      "id": "Menyadari hal-hal yang sudah menopang hidup membawa ketenangan tanpa harus memiliki segalanya sekaligus."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["gratitude", "contentment", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Gratitude shifts attention from scarcity to appreciation.",
+      "id": "Rasa syukur menggeser perhatian dari kekurangan menuju penghargaan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-034",
+    "slug": {
+      "en": "keep-your-word-and-your-conscience-light",
+      "id": "jaga-ucapan-dan-hati-nurani-tetap-ringan"
+    },
+    "content": {
+      "en": "Living in alignment with your conscience makes ordinary days remarkably peaceful.",
+      "id": "Hidup selaras dengan hati nurani membuat hari-hari biasa terasa jauh lebih damai."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["conscience", "peace", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Inner alignment reduces friction in daily decisions.",
+      "id": "Keselarasan batin mengurangi gesekan dalam keputusan sehari-hari."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-035",
+    "slug": {
+      "en": "give-grace-to-yourself-and-others",
+      "id": "beri-kelonggaran-untuk-diri-sendiri-dan-sesama"
+    },
+    "content": {
+      "en": "Everyone is navigating unseen pressures; a little grace softens the road.",
+      "id": "Setiap orang memikul tekanan yang tak terlihat; sedikit kelonggaran melunakkan perjalanan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["grace", "compassion", "humanity"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Compassion does not lower standards; it keeps humanity intact.",
+      "id": "Kebaikan hati tidak menurunkan standar; ia menjaga sisi manusiawi tetap utuh."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-036",
+    "slug": {
+      "en": "choose-what-you-can-carry-with-dignity",
+      "id": "pilih-beban-yang-dapat-dipikul-dengan-martabat"
+    },
+    "content": {
+      "en": "Not every battle requires your voice; pick the ones worthy of your energy.",
+      "id": "Tidak semua pertarungan membutuhkan suaramu; pilih yang layak bagi tenagamu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "life",
+    "tags": ["discernment", "energy", "life"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Discernment protects your strength for meaningful commitments.",
+      "id": "Ketajaman memilih menjaga kekuatan untuk komitmen yang berarti."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-037",
+    "slug": {
+      "en": "master-yourself-before-trying-to-rule-circumstances",
+      "id": "kuasai-diri-sendiri-sebelum-mengatur-keadaan"
+    },
+    "content": {
+      "en": "No person is freer than one who has mastery over their own impulses.",
+      "id": "Tidak ada yang lebih merdeka daripada orang yang menguasai dorongan dirinya sendiri."
+    },
+    "authorId": "epictetus",
+    "categoryId": "self-improvement",
+    "tags": ["self-control", "freedom", "character"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+    "interpretation": {
+      "en": "Self-regulation is the foundation of inner steadiness.",
+      "id": "Pengendalian diri adalah dasar dari keteguhan batin."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-038",
+    "slug": {
+      "en": "small-upgrades-compound-quietly",
+      "id": "peningkatan-kecil-berlipat-dalam-diam"
+    },
+    "content": {
+      "en": "Improving one percent in how you think, work, or rest compounds over a year.",
+      "id": "Meningkatkan satu persen cara berpikir, bekerja, atau beristirahat akan berlipat sepanjang tahun."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["habits", "compound", "self-improvement"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Small adjustments feel minor on day one and unmistakable after months.",
+      "id": "Penyesuaian kecil terasa sepele di hari pertama dan jelas terasa setelah berbulan-bulan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-039",
+    "slug": {
+      "en": "question-assumptions-with-calm-curiosity",
+      "id": "uji-asumsi-dengan-rasa-ingin-tahu-yang-tenang"
+    },
+    "content": {
+      "en": "Growth begins when you ask whether an old habit still serves who you are becoming.",
+      "id": "Pertumbuhan dimulai saat Anda bertanya apakah kebiasaan lama masih sesuai dengan arah diri Anda."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["self-awareness", "habits", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Outgrown habits can be replaced thoughtfully once noticed.",
+      "id": "Kebiasaan yang sudah tidak relevan dapat diganti secara sadar bila dikenali."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-040",
+    "slug": {
+      "en": "read-widely-and-reflect-slowly",
+      "id": "banyak-membaca-dan-merenung-dengan-tenang"
+    },
+    "content": {
+      "en": "Information alone changes little; reflection turns what you read into practice.",
+      "id": "Informasi saja jarang mengubah banyak hal; refleksi mengubah bacaan menjadi praktik."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["learning", "reflection", "mindset"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Digesting ideas matters more than collecting endless notes.",
+      "id": "Mencerna gagasan lebih penting daripada sekadar menumpuk catatan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-041",
+    "slug": {
+      "en": "replace-self-criticism-with-honest-coaching",
+      "id": "ganti-kritik-menghakimi-dengan-bimbingan-jujur"
+    },
+    "content": {
+      "en": "Harshness rarely teaches well; firm, honest guidance helps you improve.",
+      "id": "Sikap keras yang menghakimi jarang mengajar dengan baik; arahan yang jujur membantu bertumbuh."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["mindset", "growth", "self-improvement"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Constructive honesty points to the next fix without breaking spirit.",
+      "id": "Kejujuran yang membangun menunjukkan langkah perbaikan tanpa mematahkan semangat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-042",
+    "slug": {
+      "en": "protect-recovery-as-part-of-training",
+      "id": "jaga-pemulihan-sebagai-bagian-dari-latihan"
+    },
+    "content": {
+      "en": "Growth happens during rest and integration, not only during exertion.",
+      "id": "Pertumbuhan terjadi saat istirahat dan penyerapan, bukan hanya saat memforsir tenaga."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["recovery", "balance", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Rest restores mental sharpness for the next cycle.",
+      "id": "Istirahat memulihkan ketajaman berpikir untuk siklus berikutnya."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-043",
+    "slug": {
+      "en": "practice-saying-no-to-protect-your-yes",
+      "id": "latihan-berkata-tidak-demi-menjaga-kata-ya"
+    },
+    "content": {
+      "en": "Every automatic yes takes time away from commitments you truly value.",
+      "id": "Setiap kata 'ya' yang spontan mengurangi waktu untuk komitmen yang benar-benar Anda hargai."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["focus", "priorities", "boundaries"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Saying no cleanly is a skill that honors your time.",
+      "id": "Menolak dengan santun adalah keterampilan yang menghargai waktu Anda."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-044",
+    "slug": {
+      "en": "keep-a-journal-of-lessons-learned",
+      "id": "simpan-catatan-pelajaran-yang-dipetik"
+    },
+    "content": {
+      "en": "Writing down what you learned cements insight and spots recurring patterns.",
+      "id": "Menuliskan pelajaran yang dipetik menguatkan pemahaman dan memperlihatkan pola berulang."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["journaling", "reflection", "clarity"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Putting thoughts in writing brings order to scattered impressions.",
+      "id": "Menuangkan pikiran ke tulisan menata kesan yang masih tersebar."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-045",
+    "slug": {
+      "en": "let-progress-be-measured-by-character",
+      "id": "biarkan-kemajuan-diukur-dari-karakter"
+    },
+    "content": {
+      "en": "Skills open doors, but character determines whether you stay steady inside.",
+      "id": "Keterampilan membuka pintu, namun karakter menentukan apakah Anda tetap teguh di dalamnya."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "self-improvement",
+    "tags": ["character", "integrity", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Character holds steady when circumstances shift.",
+      "id": "Karakter tetap kokoh ketika keadaan berubah."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-046",
+    "slug": {
+      "en": "small-steps-taken-daily-outlast-bursts",
+      "id": "langkah-kecil-setiap-hari-mengalahkan-ledakan-sesaat"
+    },
+    "content": {
+      "en": "Small steps taken daily outlast bursts of intensity that fade by Friday.",
+      "id": "Langkah kecil yang diambil setiap hari akan bertahan lebih lama daripada ledakan semangat yang padam sebelum akhir pekan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["consistency", "habits", "focus"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Sustainable progress comes from repeatable daily systems rather than rare bursts.",
+      "id": "Kemajuan berkelanjutan lahir dari sistem harian yang konsisten, bukan ledakan sesaat."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-047",
+    "slug": {
+      "en": "discipline-is-choosing-the-long-view",
+      "id": "disiplin-adalah-memilih-pandangan-jangka-panjang"
+    },
+    "content": {
+      "en": "Discipline is deciding what matters most and honoring that choice when it is inconvenient.",
+      "id": "Disiplin adalah menentukan hal paling utama dan menepati pilihan itu meski sedang tidak nyaman."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["discipline", "commitment", "habits"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Real discipline shows up on ordinary, uninspiring days.",
+      "id": "Disiplin sejati tampak di hari-hari biasa yang tidak istimewa."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-048",
+    "slug": {
+      "en": "make-the-first-step-easy-to-begin",
+      "id": "buat-langkah-pertama-mudah-dimulai"
+    },
+    "content": {
+      "en": "Lowering friction at the start makes showing up far easier than relying on willpower.",
+      "id": "Menurunkan hambatan di awal membuat langkah pertama jauh lebih mudah daripada mengandalkan tekad semata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["habits", "friction", "action"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Starting small removes resistance before momentum takes over.",
+      "id": "Memulai dari yang kecil mengurangi hambatan sebelum momentum terbentuk."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-049",
+    "slug": {
+      "en": "routines-carry-you-when-focus-dips",
+      "id": "rutinitas-menopang-saat-fokus-menurun"
+    },
+    "content": {
+      "en": "A simple routine keeps you moving forward even when energy runs low.",
+      "id": "Rutinitas yang sederhana tetap menggerakkan langkah meski energi sedang menurun."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["routine", "habits", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Good routines reduce decision fatigue during busy weeks.",
+      "id": "Rutinitas yang baik mengurangi kelelahan mengambil keputusan di pekan yang padat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-050",
+    "slug": {
+      "en": "finish-what-you-start-before-chasing-new",
+      "id": "selesaikan-yang-dimulai-sebelum-mengejar-yang-baru"
+    },
+    "content": {
+      "en": "Scattered beginnings rarely yield complete work; finishing builds real momentum.",
+      "id": "Memulai banyak hal tanpa tuntas jarang memberi hasil utuh; menyelesaikan menumbuhkan daya dorong nyata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["completion", "focus", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Closing loops clears mental weight.",
+      "id": "Menuntaskan pekerjaan yang berjalan meringankan beban pikiran."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-051",
+    "slug": {
+      "en": "consistency-turns-ordinary-effort-into-craft",
+      "id": "konsistensi-mengubah-usaha-biasa-menjadi-karya"
+    },
+    "content": {
+      "en": "Repeated, unhurried practice transforms basic effort into dependable skill.",
+      "id": "Latihan berulang yang tidak terburu-buru mengubah usaha dasar menjadi kemampuan yang andal."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["craft", "practice", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Steady repetition refines precision over time.",
+      "id": "Pengulangan yang ajeg mempertajam ketelitian seiring waktu."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-052",
+    "slug": {
+      "en": "do-the-boring-work-well",
+      "id": "kerjakan-hal-membosankan-dengan-baik"
+    },
+    "content": {
+      "en": "Excellence often hides in routine maintenance that others skip.",
+      "id": "Keunggulan sering tersembunyi pada perawatan rutin yang kerap dilewatkan orang lain."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["maintenance", "diligence", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Attention to routine details prevents larger breakdowns later.",
+      "id": "Perhatian pada detail rutin mencegah masalah yang lebih besar di kemudian hari."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-053",
+    "slug": {
+      "en": "master-your-schedule-or-it-will-master-you",
+      "id": "atur-jadwalmu-atau-jadwal-yang-mengaturmu"
+    },
+    "content": {
+      "en": "Intentional blocks protect deep work from constant interruption.",
+      "id": "Blok waktu yang terencana melindungi kerja mendalam dari gangguan terus-menerus."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["time-management", "focus", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Planning your week gives intention to your hours.",
+      "id": "Merencanakan pekan memberi arah yang jelas pada setiap jam."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-054",
+    "slug": {
+      "en": "stay-patient-with-the-plateau",
+      "id": "bersabarlah-saat-berada-di-titik-datar"
+    },
+    "content": {
+      "en": "Plateaus are part of growth; keep practicing until the next breakthrough connects.",
+      "id": "Fase datar adalah bagian dari pertumbuhan; terus berlatih hingga lompatan berikutnya terhubung."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "discipline",
+    "tags": ["plateau", "perseverance", "discipline"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Quiet persistence bridges the gap between effort and visible change.",
+      "id": "Ketekunan yang tenang menjembatani usaha dan perubahan yang terlihat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-055",
+    "slug": {
+      "en": "true-friendship-stays-steady-in-quiet-times",
+      "id": "persahabatan-sejati-tetap-teguh-di-saat-tenang"
+    },
+    "content": {
+      "en": "True friendship does not need constant noise to stay warm and dependable.",
+      "id": "Persahabatan sejati tidak butuh keramaian terus-menerus untuk tetap hangat dan dapat diandalkan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["friendship", "loyalty", "trust"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Enduring bonds thrive on mutual respect and quiet presence.",
+      "id": "Ikatan yang bertahan tumbuh dari rasa hormat dan kehadiran yang tulus."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-056",
+    "slug": {
+      "en": "honest-kindness-strengthens-real-bonds",
+      "id": "kejujuran-yang-lembut-menguatkan-ikatan-nyata"
+    },
+    "content": {
+      "en": "A real friend speaks truth with care rather than flattery or cruelty.",
+      "id": "Sahabat sejati menyampaikan kebenaran dengan kepedulian, bukan sekadar pujian atau kata tajam."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["honesty", "care", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Candid care builds trust that superficial agreement cannot.",
+      "id": "Kepedulian yang jujur membangun kepercayaan yang tak bisa diberikan basa-basi."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-057",
+    "slug": {
+      "en": "show-up-without-keeping-score",
+      "id": "hadir-tanpa-menghitung-untung-rugi"
+    },
+    "content": {
+      "en": "Generosity in friendship grows when you help without keeping a ledger.",
+      "id": "Ketulusan dalam persahabatan tumbuh saat kita membantu tanpa mencatat untung-rugi."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["generosity", "friendship", "support"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Mutual care flourishes when given freely.",
+      "id": "Kepedulian timbal balik berkembang saat diberi dengan lapang dada."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-058",
+    "slug": {
+      "en": "distance-tests-noise-but-keeps-what-is-real",
+      "id": "jarak-menguji-kebisingan-dan-menjaga-yang-nyata"
+    },
+    "content": {
+      "en": "Time and distance often clarify which friendships were built on genuine care.",
+      "id": "Waktu dan jarak sering memperjelas persahabatan mana yang benar-benar tumbuh dari ketulusan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["distance", "friendship", "endurance"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "A single thoughtful check-in can bridge months apart.",
+      "id": "Satu kabar penuh perhatian dapat menyambungkan jarak berbulan-bulan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-059",
+    "slug": {
+      "en": "celebrate-friends-wins-without-envy",
+      "id": "rayakan-keberhasilan-sahabat-tanpa-iri"
+    },
+    "content": {
+      "en": "Being genuinely glad for another's good news lightens your own heart.",
+      "id": "Turut bergembira atas kabar baik sahabat melapangkan hati kita sendiri."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["joy", "generosity", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Shared joy multiplies goodwill.",
+      "id": "Kebahagiaan yang ikut dirayakan melipatgandakan niat baik."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-060",
+    "slug": {
+      "en": "be-a-safe-place-to-be-candid",
+      "id": "jadilah-ruang-aman-untuk-bercerita-jujur"
+    },
+    "content": {
+      "en": "Good company gives people room to speak openly without fear of judgment.",
+      "id": "Lingkungan pertemanan yang sehat memberi ruang untuk bicara jujur tanpa takut dihakimi."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["safety", "trust", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Psychological safety is one of friendship's greatest gifts.",
+      "id": "Rasa aman untuk terbuka adalah salah satu hadiah terbesar persahabatan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-061",
+    "slug": {
+      "en": "forgive-small-oversights-early",
+      "id": "maafkan-kelalaian-kecil-sejak-awal"
+    },
+    "content": {
+      "en": "Do not let minor misunderstandings harden into silence between good friends.",
+      "id": "Jangan biarkan salah paham kecil mengeras menjadi jarak diam di antara sahabat."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["forgiveness", "communication", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Clear, gentle words resolve friction before it grows.",
+      "id": "Kata-kata yang jelas dan lembut menyelesaikan gesekan sebelum membesar."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-062",
+    "slug": {
+      "en": "value-those-who-stand-by-you-in-storms",
+      "id": "hargai-yang-tetap-ada-saat-badai"
+    },
+    "content": {
+      "en": "You learn the weight of companionship when circumstances turn demanding.",
+      "id": "Kita mengenali bobot kebersamaan saat keadaan menjadi lebih menantang."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["loyalty", "resilience", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Steady presence in tough moments leaves a lasting mark.",
+      "id": "Kehadiran yang teguh di masa sulit meninggalkan jejak mendalam."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-063",
+    "slug": {
+      "en": "make-time-before-busyness-decides",
+      "id": "luangkan-waktu-sebelum-kesibukan-menentukan"
+    },
+    "content": {
+      "en": "If you wait for spare time to connect, months can slip by unnoticed.",
+      "id": "Jika menunggu waktu luang untuk menyapa, berbulan-bulan bisa berlalu tanpa disadari."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "friendship",
+    "tags": ["time", "connection", "friendship"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Small, intentional check-ins keep relationships alive.",
+      "id": "Sapaan kecil yang disengaja menjaga hubungan tetap hidup."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-064",
+    "slug": {
+      "en": "love-shows-up-in-patient-everyday-care",
+      "id": "cinta-tampak-pada-kepedulian-harian-yang-sabar"
+    },
+    "content": {
+      "en": "Love is proven in patient attention and steady care on ordinary days.",
+      "id": "Cinta terbukti lewat perhatian yang sabar dan kepedulian yang ajeg di hari-hari biasa."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["love", "patience", "care"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Quiet daily gestures matter more than grand promises.",
+      "id": "Sikap peduli sehari-hari lebih berarti daripada janji besar yang kosong."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-065",
+    "slug": {
+      "en": "respect-is-the-ground-where-love-grows",
+      "id": "saling-menghormati-adalah-tanah-tumbuhnya-cinta"
+    },
+    "content": {
+      "en": "Care without mutual respect soon feels heavy; respect keeps love humane and free.",
+      "id": "Kepedulian tanpa saling menghormati cepat terasa berat; rasa hormat menjaga cinta tetap sehat."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["respect", "love", "partnership"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Respect honors individuality while nurturing closeness.",
+      "id": "Rasa hormat menghargai keunikan masing-masing sambil menguatkan kedekatan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-066",
+    "slug": {
+      "en": "speak-gently-when-emotions-run-high",
+      "id": "berbicaralah-lembut-saat-emosi-meninggi"
+    },
+    "content": {
+      "en": "Softening your tone in hard moments helps two people hear each other again.",
+      "id": "Melembutkan nada bicara di saat sulit membantu dua orang saling mendengar kembali."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["communication", "calm", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Calmness de-escalates tension and protects trust.",
+      "id": "Ketenangan meredakan ketegangan dan menjaga kepercayaan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-067",
+    "slug": {
+      "en": "home-is-a-feeling-you-build-together",
+      "id": "rumah-adalah-rasa-yang-dibangun-bersama"
+    },
+    "content": {
+      "en": "A peaceful home is built through listening, forgiveness, and shared responsibility.",
+      "id": "Rumah yang damai dibangun lewat saling mendengar, memaafkan, dan berbagi tanggung jawab."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["home", "partnership", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Shared warmth turns a house into a sanctuary.",
+      "id": "Kehangatan yang dibangun bersama mengubah tempat tinggal menjadi peneduh."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-068",
+    "slug": {
+      "en": "give-attention-not-just-presence",
+      "id": "beri-perhatian-bukan-sekadar-hadir-fisik"
+    },
+    "content": {
+      "en": "Sitting in the same room means more when your mind is truly there too.",
+      "id": "Berada di ruangan yang sama jauh lebih bermakna saat pikiran kita juga benar-benar hadir."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["attention", "presence", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Undivided attention is a simple, rare gift.",
+      "id": "Perhatian yang utuh adalah hadiah sederhana yang langka."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-069",
+    "slug": {
+      "en": "grace-keeps-hearts-close-through-flaws",
+      "id": "kelapangan-hati-menjaga-kedekatan-di-tengah-kekurangan"
+    },
+    "content": {
+      "en": "Loving well means accepting human imperfection without keeping score.",
+      "id": "Mencintai dengan baik berarti menerima ketidaksempurnaan manusiawi tanpa menghitung salah."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["grace", "acceptance", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Grace creates space for both people to grow.",
+      "id": "Kelapangan hati memberi ruang bagi kedua pihak untuk bertumbuh."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-070",
+    "slug": {
+      "en": "small-acts-of-thoughtfulness-endure",
+      "id": "tindakan-perhatian-kecil-bertahan-lama"
+    },
+    "content": {
+      "en": "A warm cup of tea or a timely check-in often says what long speeches cannot.",
+      "id": "Secangkir teh hangat atau kabar di waktu tepat sering menyampaikan hal yang tak terucap."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["thoughtfulness", "care", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Everyday tenderness anchors long-term affection.",
+      "id": "Kelembutan sehari-hari menguatkan kasih sayang jangka panjang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-071",
+    "slug": {
+      "en": "choose-kindness-when-tired",
+      "id": "pilih-kebaikan-saat-sedang-lelah"
+    },
+    "content": {
+      "en": "Fatigue tests how we treat the people closest to us; guard your kindness then.",
+      "id": "Kelelahan menguji cara kita memperlakukan orang terdekat; jaga kebaikan sikap di saat itu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["kindness", "patience", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Noticing tiredness helps you pause before reacting.",
+      "id": "Menyadari rasa lelah membantu memberi jeda sebelum bereaksi."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-072",
+    "slug": {
+      "en": "true-affection-gives-room-to-flourish",
+      "id": "kasih-sayang-sejati-memberi-ruang-untuk-tumbuh"
+    },
+    "content": {
+      "en": "Care that supports growth helps both people become truer versions of themselves.",
+      "id": "Kepedulian yang mendukung pertumbuhan membantu setiap orang menjadi diri yang lebih utuh."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "love",
+    "tags": ["growth", "support", "love"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Healthy care encourages both security and personal growth.",
+      "id": "Kepedulian yang sehat menumbuhkan rasa aman sekaligus ruang berkembang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-073",
+    "slug": {
+      "en": "happiness-lives-in-a-calm-mind",
+      "id": "kebahagiaan-berada-pada-pikiran-yang-tenang"
+    },
+    "content": {
+      "en": "Contentment grows when your mind is not constantly fighting what is already here.",
+      "id": "Kecukupan batin tumbuh saat pikiran tidak terus-menerus melawan kenyataan yang sedang ada."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["contentment", "calm", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Peace and joy often sit closer to acceptance than endless chasing.",
+      "id": "Ketenangan dan sukacita sering kali lebih dekat pada penerimaan daripada kejaran tanpa henti."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-074",
+    "slug": {
+      "en": "slow-down-enough-to-taste-the-present",
+      "id": "pelankan-langkah-agar-terasa-masa-kini"
+    },
+    "content": {
+      "en": "Rushing through every moment blurs the simple joys right in front of you.",
+      "id": "Terburu-buru melewati setiap saat mengaburkan kebahagiaan sederhana di depan mata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["mindfulness", "presence", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Slowing down sharpens appreciation for small moments.",
+      "id": "Memperlambat langkah mempertajam penghargaan pada momen-momen kecil."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-075",
+    "slug": {
+      "en": "joy-returns-when-comparison-stops",
+      "id": "sukacita-kembali-saat-perbandingan-berhenti"
+    },
+    "content": {
+      "en": "Comparing your behind-the-scenes with someone else's highlights steals quiet joy.",
+      "id": "Membandingkan proses di balik layar kita dengan sorotan orang lain mencuri sukacita yang tenang."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["comparison", "gratitude", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Focusing on your own path restores contentment.",
+      "id": "Memusatkan perhatian pada jalan sendiri memulihkan rasa cukup."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-076",
+    "slug": {
+      "en": "laughter-and-lightness-heal-heavy-weeks",
+      "id": "tawa-dan-keringanan-meringankan-pekan-yang-berat"
+    },
+    "content": {
+      "en": "Allowing moments of lightness keeps perspective healthy when work feels serious.",
+      "id": "Memberi ruang bagi hal-hal ringan menjaga sudut pandang tetap sehat saat pekerjaan terasa serius."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["joy", "balance", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Lightness is a healthy release valve, not carelessness.",
+      "id": "Keringanan adalah jeda sehat untuk melepas penat, bukan sikap abai."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-077",
+    "slug": {
+      "en": "enough-is-a-peaceful-place-to-stand",
+      "id": "cukup-adalah-titik-pijak-yang-damai"
+    },
+    "content": {
+      "en": "Knowing what is enough frees you from endless restlessness.",
+      "id": "Mengetahui batas cukup membebaskan Anda dari kegelisahan yang tak berkesudahan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["sufficiency", "peace", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Sufficiency brings steadiness in both work and life.",
+      "id": "Rasa cukup membawa ketenangan dalam kerja maupun kehidupan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-078",
+    "slug": {
+      "en": "simple-pleasures-need-no-fanfare",
+      "id": "kesenangan-sederhana-tak-butuh-kemeriahan"
+    },
+    "content": {
+      "en": "Morning sunlight, a good meal, and unhurried conversation hold steady warmth.",
+      "id": "Cahaya pagi, hidangan hangat, dan obrolan santai menyimpan kehangatan yang nyata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["simplicity", "gratitude", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Small everyday comforts sustain emotional balance.",
+      "id": "Kenyamanan kecil sehari-hari menjaga keseimbangan emosi."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-079",
+    "slug": {
+      "en": "gratitude-opens-eyes-to-quiet-blessings",
+      "id": "rasa-syukur-membuka-mata-pada-nikmat-yang-tenang"
+    },
+    "content": {
+      "en": "Gratitude does not deny hardship; it reveals the good still present alongside it.",
+      "id": "Syukur tidak menyangkal kesulitan; ia menyingkapkan kebaikan yang tetap hadir di sampingnya."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["gratitude", "resilience", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Practicing gratitude shifts daily outlook toward balance.",
+      "id": "Membiasakan syukur menggeser cara pandang harian menuju keseimbangan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-080",
+    "slug": {
+      "en": "let-go-of-what-you-cannot-control",
+      "id": "lepaskan-hal-yang-di-luar-kendalimu"
+    },
+    "content": {
+      "en": "Releasing what is outside your control lightens unnecessary worry.",
+      "id": "Melepaskan hal yang berada di luar kendali meringankan kekhawatiran yang tidak perlu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["let-go", "serenity", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Energy saved from worry can go toward constructive action.",
+      "id": "Tenaga yang hemat dari cemas bisa dipakai untuk langkah yang bermanfaat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-081",
+    "slug": {
+      "en": "peace-of-mind-is-worth-protecting",
+      "id": "ketenangan-pikiran-layak-dijaga"
+    },
+    "content": {
+      "en": "Guard your inner calm as carefully as you guard your time and health.",
+      "id": "Jaga ketenangan batin Anda seteliti Anda menjaga waktu dan kesehatan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "happiness",
+    "tags": ["peace", "wellbeing", "happiness"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Inner calm anchors you through changing moods.",
+      "id": "Ketenangan batin menjadi penjangkar saat suasana hati berubah."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-082",
+    "slug": {
+      "en": "protect-your-attention-as-your-scarcest-currency",
+      "id": "lindungi-perhatianmu-sebagai-aset-paling-berharga"
+    },
+    "content": {
+      "en": "Protect your attention as your scarcest currency; whatever claims your focus shapes your life.",
+      "id": "Lindungi perhatianmu sebagai aset paling berharga; apa pun yang menguasai fokusmu akan membentuk hidupmu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["attention", "mindfulness", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Designing a calm environment is a practical act of self-respect.",
+      "id": "Merancang lingkungan yang tenang adalah bentuk penghormatan nyata terhadap diri sendiri."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-083",
+    "slug": {
+      "en": "wisdom-knows-when-to-pause-before-speaking",
+      "id": "kebijaksanaan-tahu-kapan-menjeda-sebelum-berbicara"
+    },
+    "content": {
+      "en": "A brief pause before replying often turns a reactive word into a thoughtful one.",
+      "id": "Jeda singkat sebelum membalas sering mengubah ucapan reaktif menjadi kata yang lebih matang."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["pause", "speech", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "A few seconds of stillness prevent many avoidable regrets.",
+      "id": "Beberapa detik jeda mencegah banyak penyesalan yang sebenarnya bisa dihindari."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-084",
+    "slug": {
+      "en": "do-not-be-tossed-by-every-passing-opinion",
+      "id": "jangan-terombang-ambing-oleh-setiap-opini-yang-lewat"
+    },
+    "content": {
+      "en": "Anchor your judgment in principles rather than shifting crowds.",
+      "id": "Tambatkan pertimbangan Anda pada prinsip, bukan pada kerumunan yang terus berubah."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["discernment", "principles", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Principles give stability when trends move quickly.",
+      "id": "Prinsip memberi pijakan yang kokoh saat tren berubah cepat."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-085",
+    "slug": {
+      "en": "clarity-often-comes-from-removing-the-extra",
+      "id": "kejernihan-sering-datang-dengan-menghapus-yang-berlebih"
+    },
+    "content": {
+      "en": "Subtracting unnecessary complexity often solves what adding more cannot.",
+      "id": "Mengurangi kerumitan yang tidak perlu sering menyelesaikan hal yang tak terpecahkan dengan menambah."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["simplicity", "clarity", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Simplicity reveals the core issue clearly.",
+      "id": "Kesederhanaan memperjelas inti persoalan yang sebenarnya."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-086",
+    "slug": {
+      "en": "experience-teaches-most-when-examined-honestly",
+      "id": "pengalaman-paling-mengajar-saat-diuji-dengan-jujur"
+    },
+    "content": {
+      "en": "Years pass for everyone, but reflection turns experience into wisdom.",
+      "id": "Waktu berlalu bagi semua orang, namun refleksilah yang mengubah pengalaman menjadi kebijaksanaan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["reflection", "experience", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Examining both wins and misses deepens judgment.",
+      "id": "Mengulas keberhasilan maupun kekeliruan mempertajam pertimbangan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-087",
+    "slug": {
+      "en": "humility-keeps-the-mind-open-to-truth",
+      "id": "kerendahan-hati-menjaga-pikiran-terbuka-pada-kebenaran"
+    },
+    "content": {
+      "en": "Holding ideas lightly makes it easier to update your view when better evidence appears.",
+      "id": "Memegang gagasan dengan lentur memudahkan kita memperbarui pandangan saat fakta baru muncul."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["humility", "truth", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Intellectual humility is strength, not weakness.",
+      "id": "Kerendahan hati dalam berpikir adalah kekuatan, bukan kelemahan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-088",
+    "slug": {
+      "en": "distinguish-what-is-up-to-us-from-what-is-not",
+      "id": "bedakan-yang-bergantung-pada-kita-dan-yang-bukan"
+    },
+    "content": {
+      "en": "Focus your energy on your own choices and responses rather than external outcomes alone.",
+      "id": "Arahkan tenaga pada pilihan dan respons diri sendiri alih-alih sekadar terpaku pada hasil luar."
+    },
+    "authorId": "epictetus",
+    "categoryId": "wisdom",
+    "tags": ["stoicism", "control", "wisdom"],
+    "isOriginal": false,
+    "sourceUrl": "https://en.wikiquote.org/wiki/Epictetus",
+    "interpretation": {
+      "en": "Clarity on what you control brings steadiness in uncertainty.",
+      "id": "Kejelasan tentang hal yang dapat dikendalikan membawa ketenangan saat tidak pasti."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-089",
+    "slug": {
+      "en": "patience-with-others-reflects-depth-of-view",
+      "id": "kesabaran-pada-sesama-mencerminkan-kedalaman-pandang"
+    },
+    "content": {
+      "en": "Seeing the wider context makes it easier to respond with steadiness rather than frustration.",
+      "id": "Melihat konteks yang lebih luas memudahkan kita merespons dengan tenang alih-alih kesal."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["patience", "perspective", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Broader perspective softens hasty judgments.",
+      "id": "Sudut pandang yang lebih luas melunakkan penilaian yang tergesa."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-090",
+    "slug": {
+      "en": "less-noise-more-signal-in-daily-life",
+      "id": "lebih-sedikit-bising-lebih-banyak-makna-di-keseharian"
+    },
+    "content": {
+      "en": "Choose fewer inputs so your own thoughts have room to breathe.",
+      "id": "Pilih asupan yang lebih sedikit agar pikiran Anda sendiri punya ruang untuk bernapas."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "wisdom",
+    "tags": ["focus", "simplicity", "wisdom"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Quiet space supports original thinking and calm decisions.",
+      "id": "Ruang yang tenang menopang pemikiran jernih dan keputusan matang."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-091",
+    "slug": {
+      "en": "craftsmanship-builds-a-reputation-that-speaks-for-you",
+      "id": "kualitas-kerja-membangun-reputasi-yang-berbicara-sendiri"
+    },
+    "content": {
+      "en": "Consistent, dependable work builds trust long before you need to promote yourself.",
+      "id": "Kerja yang konsisten dan dapat diandalkan membangun kepercayaan jauh sebelum Anda perlu mempromosikan diri."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["craftsmanship", "reputation", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Reliable execution is one of the strongest career assets.",
+      "id": "Eksekusi yang dapat diandalkan adalah salah satu aset karier terkuat."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-092",
+    "slug": {
+      "en": "ownership-turns-tasks-into-meaningful-work",
+      "id": "rasa-memiliki-mengubah-tugas-menjadi-karya-bermakna"
+    },
+    "content": {
+      "en": "Taking ownership means solving problems thoroughly rather than passing friction along.",
+      "id": "Memiliki rasa tanggung jawab berarti menuntaskan masalah dengan tuntas, bukan sekadar melempar kendala."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["ownership", "accountability", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Accountability earns trust from teammates, clients, and leaders.",
+      "id": "Tanggung jawab menumbuhkan kepercayaan dari rekan, klien, dan pimpinan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-093",
+    "slug": {
+      "en": "clear-communication-saves-countless-hours",
+      "id": "komunikasi-yang-jelas-menghemat-banyak-waktu"
+    },
+    "content": {
+      "en": "Writing clear updates and asking direct questions prevents costly misunderstandings.",
+      "id": "Menyampaikan kabar yang jelas dan bertanya langsung mencegah kesalahpahaman yang memakan waktu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["communication", "clarity", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Clarity in writing and conversation speeds up alignment.",
+      "id": "Kejelasan dalam tulisan dan percakapan mempercepat keselarasan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-094",
+    "slug": {
+      "en": "learn-the-fundamentals-deeply",
+      "id": "kuasai-dasar-dasarnya-secara-mendalam"
+    },
+    "content": {
+      "en": "Tools change every year, but strong fundamentals carry you across every transition.",
+      "id": "Perangkat terus berganti tiap tahun, namun pemahaman dasar menopang Anda di setiap transisi."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["fundamentals", "skills", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Foundational mastery adapts faster to new workflows.",
+      "id": "Penguasaan dasar memudahkan adaptasi pada alur kerja baru."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-095",
+    "slug": {
+      "en": "listen-to-users-and-real-needs",
+      "id": "dengarkan-pengguna-dan-kebutuhan-nyata"
+    },
+    "content": {
+      "en": "The best solutions start by understanding real problems clearly, not guessing.",
+      "id": "Solusi terbaik berawal dari memahami masalah nyata dengan jelas, bukan sekadar menebak."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["problem-solving", "empathy", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Empathy keeps product and service work grounded in reality.",
+      "id": "Empati menjaga pekerjaan produk dan layanan tetap berpijak pada kenyataan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-096",
+    "slug": {
+      "en": "steady-delivery-beats-dramatic-promises",
+      "id": "penyelesaian-yang-ajeg-mengalahkan-janji-besar"
+    },
+    "content": {
+      "en": "Delivering what you said you would deliver creates quiet confidence around your name.",
+      "id": "Menyelesaikan apa yang telah dijanjikan menumbuhkan keyakinan yang tenang pada nama Anda."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["reliability", "delivery", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Predictable delivery makes collaboration smoother for everyone.",
+      "id": "Hasil kerja yang terukur membuat kolaborasi lebih ringan bagi semua pihak."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-097",
+    "slug": {
+      "en": "stay-teachable-at-every-stage",
+      "id": "tetap-mau-diajari-di-setiap-tahap"
+    },
+    "content": {
+      "en": "Experience is valuable, yet openness to new perspectives keeps your work fresh.",
+      "id": "Pengalaman itu berharga, namun keterbukaan pada sudut pandang baru menjaga karya tetap segar."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["adaptability", "learning", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Curiosity prevents experience from becoming rigid routine.",
+      "id": "Rasa ingin tahu mencegah pengalaman berubah menjadi rutinitas yang kaku."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-098",
+    "slug": {
+      "en": "build-skills-that-compound-over-time",
+      "id": "bangun-keahlian-yang-berlipat-seiring-waktu"
+    },
+    "content": {
+      "en": "Choose projects that teach transferable skills alongside immediate income.",
+      "id": "Pilih proyek yang melatih keahlian lintas waktu sekaligus memberi nilai nyata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["skills", "long-term", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Transferable skills expand your options over the years.",
+      "id": "Keahlian yang dapat dialihkan memperluas pilihan Anda dari tahun ke tahun."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-099",
+    "slug": {
+      "en": "lead-by-example-and-calm-steadiness",
+      "id": "pimpin-lewat-teladan-dan-ketenangan"
+    },
+    "content": {
+      "en": "People notice how you handle pressure long before they notice titles.",
+      "id": "Orang memperhatikan cara Anda menghadapi tekanan jauh sebelum melihat jabatan."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "career",
+    "tags": ["leadership", "calm", "career"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Steadiness under pressure sets the tone for a team.",
+      "id": "Ketenangan saat tertekan menentukan suasana kerja seluruh tim."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-100",
+    "slug": {
+      "en": "clarity-follows-action-not-endless-deliberation",
+      "id": "kejernihan-mengikuti-tindakan-bukan-keraguan-panjang"
+    },
+    "content": {
+      "en": "Clarity rarely precedes action; it reveals itself the moment you begin building.",
+      "id": "Kejernihan jarang mendahului tindakan; ia menyingkapkan dirinya tepat saat Anda mulai melangkah."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["clarity", "execution", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Real-world feedback teaches more in one afternoon than months of overthinking.",
+      "id": "Umpan balik nyata mengajarkan jauh lebih banyak dalam satu sore daripada berbulan-bulan berpikir berlebihan."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-101",
+    "slug": {
+      "en": "growth-asks-you-to-outgrow-old-comforts",
+      "id": "pertumbuhan-mengajak-melampaui-zona-nyaman-lama"
+    },
+    "content": {
+      "en": "Staying comfortable is easy, but stretching slightly builds real capacity.",
+      "id": "Tetap nyaman itu mudah, namun melangkah sedikit melampaui batas membangun kapasitas nyata."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["comfort-zone", "growth", "courage"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Measured stretching builds strength without reckless leaps.",
+      "id": "Langkah keluar zona nyaman yang terukur membangun kekuatan tanpa nekat."
+    },
+    "published": true,
+    "featured": true,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-102",
+    "slug": {
+      "en": "every-skill-starts-clumsy",
+      "id": "setiap-keahlian-berawal-dari-canggung"
+    },
+    "content": {
+      "en": "Do not judge your early drafts against someone else's polished tenth year.",
+      "id": "Jangan menilai draf awal Anda dengan standar tahun kesepuluh karya orang lain."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["beginnings", "patience", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Awkward beginnings are normal when learning something new.",
+      "id": "Rasa canggung di awal adalah hal wajar saat mempelajari hal baru."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-103",
+    "slug": {
+      "en": "curiosity-turns-questions-into-doors",
+      "id": "rasa-ingin-tahu-mengubah-pertanyaan-menjadi-pintu"
+    },
+    "content": {
+      "en": "Asking thoughtful questions often uncovers paths that routine answers hide.",
+      "id": "Mengajukan pertanyaan yang mendalam sering membuka jalan yang tertutup jawaban rutin."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["curiosity", "questions", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Genuine curiosity keeps learning alive at any age.",
+      "id": "Rasa ingin tahu yang tulus menjaga semangat belajar di usia berapa pun."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-104",
+    "slug": {
+      "en": "let-go-of-needing-to-know-everything-first",
+      "id": "lepaskan-keharusan-tahu-segalanya-di-awal"
+    },
+    "content": {
+      "en": "You can learn much of what you need along the way once you start.",
+      "id": "Banyak hal yang dibutuhkan bisa dipelajari di perjalanan begitu Anda memulai."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["learning", "action", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Learning in motion bridges gaps that waiting cannot.",
+      "id": "Belajar sambil berjalan menjembatani celah yang tak terjawab dengan menunggu."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-105",
+    "slug": {
+      "en": "reflect-on-who-you-are-becoming",
+      "id": "renungkan-pribadi-yang-sedang-bertumbuh"
+    },
+    "content": {
+      "en": "Growth is not only collecting achievements; it is becoming calmer and wiser.",
+      "id": "Pertumbuhan bukan sekadar mengumpulkan capaian; ia juga tentang menjadi lebih tenang dan bijak."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["identity", "wisdom", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Inner maturity shapes how you carry every opportunity.",
+      "id": "Kematangan batin menentukan cara Anda memikul setiap kesempatan."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-106",
+    "slug": {
+      "en": "turn-friction-into-a-question",
+      "id": "ubah-gesekan-menjadi-pertanyaan"
+    },
+    "content": {
+      "en": "When something feels stuck, ask what is missing rather than blaming the whole day.",
+      "id": "Saat sesuatu terasa macet, tanyakan apa yang kurang alih-alih menyalahkan seluruh hari."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["inquiry", "problem-solving", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Targeted questions point toward practical next steps.",
+      "id": "Pertanyaan yang tepat mengarah pada langkah praktis berikutnya."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-107",
+    "slug": {
+      "en": "stay-anchored-while-evolving",
+      "id": "tetap-berakar-saat-terus-berkembang"
+    },
+    "content": {
+      "en": "You can grow into new roles while staying true to what matters most to you.",
+      "id": "Anda bisa bertumbuh ke peran baru sambil tetap setia pada nilai yang paling penting bagi Anda."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["evolution", "values", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "Roots keep you grounded while branches reach higher.",
+      "id": "Akar menjaga pijakan tetap kokoh sementara cabang menjangkau lebih tinggi."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  },
+  {
+    "id": "qf-108",
+    "slug": {
+      "en": "each-day-offers-a-fresh-reset",
+      "id": "setiap-hari-menawarkan-awal-yang-segar"
+    },
+    "content": {
+      "en": "Tomorrow arrives with a clean page; carry the lesson and leave the weight behind.",
+      "id": "Esok datang dengan lembaran baru; bawa pelajarannya dan tinggalkan beban yang tak perlu."
+    },
+    "authorId": "quoteflow-editorial",
+    "categoryId": "growth",
+    "tags": ["renewal", "hope", "growth"],
+    "isOriginal": true,
+    "interpretation": {
+      "en": "A fresh start does not require perfection—just a willing next step.",
+      "id": "Awal yang baru tidak menuntut kesempurnaan—cukup kesediaan melangkah lagi."
+    },
+    "published": true,
+    "featured": false,
+    "createdAt": ""
+  }
+]

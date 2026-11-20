@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="Syarat & Ketentuan — QuoteFlow"
+  description="Anda dapat menelusuri kutipan, menyesuaikan poster, dan mengunduh gambar PNG untuk kebutuhan pribadi maupun berbagi di media sosial dengan tetap menghormati atribusi serta hak cipta sumber terkait."
+  locale="id"
+  alternateUrl="/terms/"
+>
+  <section class="section">
+    <div class="container info-wrap">
+      <Breadcrumb items={[{ label: 'Beranda', href: '/id/' }, { label: 'Syarat & Ketentuan' }]} />
+      <article class="card info-card">
+        <h1 class="heading-serif info-h1">Syarat & Ketentuan</h1>
+        <p class="info-p">Anda dapat menelusuri kutipan, menyesuaikan poster, dan mengunduh gambar PNG untuk kebutuhan pribadi maupun berbagi di media sosial dengan tetap menghormati atribusi serta hak cipta sumber terkait.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .info-wrap { max-width: 820px; }
+  .info-card { padding: 2.25rem; }
+  .info-h1 { font-size: clamp(1.8rem, 3vw, 2.35rem); margin-bottom: 1rem; }
+  .info-p { color: var(--color-charcoal-muted); line-height: 1.75; }
+</style>

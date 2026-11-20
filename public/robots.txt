@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quoteflow.pages.dev/sitemap-index.xml

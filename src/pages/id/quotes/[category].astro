@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import QuoteCard from '../../../components/QuoteCard.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import { getAllCategories, getAllQuotes } from '../../../utils/repository';
+import { getLocalizedPath } from '../../../utils/i18n';
+import type { Category } from '../../../types';
+
+export function getStaticPaths() {
+  const categories = getAllCategories();
+  return categories.map((cat) => ({
+    params: { category: cat.slug.id },
+    props: { category: cat },
+  }));
+}
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const locale = 'id';
+const quotes = getAllQuotes().filter((q) => q.categoryId === category.id);
+const alternateUrl = getLocalizedPath('en', `/quotes/${category.slug.en}/`);
+---
+
+<BaseLayout
+  title={`Kutipan ${category.name.id} — QuoteFlow`}
+  description={category.description.id}
+  locale={locale}
+  alternateUrl={alternateUrl}
+>
+  <section class="section">
+    <div class="container">
+      <Breadcrumb
+        items={[
+          { label: 'Beranda', href: '/id/' },
+          { label: 'Pustaka', href: '/id/library/' },
+          { label: category.name.id },
+        ]}
+      />
+
+      <header class="cat-hero">
+        <span class="badge">{quotes.length} Kutipan</span>
+        <h1 class="heading-serif cat-h1">{category.name.id}</h1>
+        <p class="cat-lead">{category.description.id}</p>
+      </header>
+
+      <div class="grid-2">
+        {
+          quotes.map((q) => (
+            <div class="quote-item-col">
+              <QuoteCard quote={q} locale={locale} />
+              <a href={getLocalizedPath(locale, `/quote/${q.slug.id}/`)} class="detail-ref">
+                Makna & Detail →
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <AdSlot locale={locale} slotId="category-bottom-banner-id" format="banner" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .cat-hero { margin-bottom: 2rem; }
+  .cat-h1 { font-size: clamp(2rem, 3.6vw, 2.8rem); margin-block: 0.75rem 0.5rem; }
+  .cat-lead { max-width: 62ch; color: var(--color-charcoal-muted); font-size: 1.02rem; }
+  .quote-item-col { display: flex; flex-direction: column; gap: 0.45rem; }
+  .detail-ref { align-self: flex-end; font-size: 0.82rem; font-weight: 600; color: var(--color-gold-dark); }
+</style>

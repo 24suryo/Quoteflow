@@ -1,0 +1,329 @@
+---
+import type { Locale } from '../types';
+import Breadcrumb from './Breadcrumb.astro';
+import AdSlot from './AdSlot.astro';
+import { getAllCategories, getAllQuotes } from '../utils/repository';
+import { getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const categories = getAllCategories();
+const quotes = getAllQuotes();
+
+const serializedQuotes = quotes.map((q) => ({
+  id: q.id,
+  categoryId: q.categoryId,
+  author: q.author.name,
+  isOriginal: q.isOriginal,
+  tags: q.tags,
+  locales: {
+    en: {
+      text: q.content.en,
+      category: q.category.name.en,
+      interpretation: q.interpretation.en,
+    },
+    id: {
+      text: q.content.id,
+      category: q.category.name.id,
+      interpretation: q.interpretation.id,
+    },
+  },
+}));
+
+const first = serializedQuotes[0];
+const firstLoc = first.locales[locale];
+
+const t =
+  locale === 'id'
+    ? {
+        home: 'Beranda',
+        gen: 'Generator Kutipan',
+        title: 'Generator Kutipan Inspiratif',
+        subtitle: 'Acak kutipan, saring berdasarkan tema, cari kata kunci, atau ubah menjadi poster PNG.',
+        searchPlaceholder: 'Cari kutipan, tokoh, atau kata kunci...',
+        allCategories: 'Semua Kategori',
+        shuffle: 'Acak Kutipan',
+        prev: '← Sebelumnya',
+        next: 'Berikutnya →',
+        save: 'Favoritkan',
+        saved: 'Tersimpan',
+        copyText: 'Salin Teks',
+        copyFull: 'Salin + Penulis',
+        share: 'Bagikan',
+        designPoster: 'Desain Poster PNG',
+        relatedHeading: 'Kutipan Serupa dalam Tema Ini',
+        favoritesLink: 'Lihat Semua Favorit →',
+      }
+    : {
+        home: 'Home',
+        gen: 'Quote Generator',
+        title: 'Inspirational Quote Generator',
+        subtitle: 'Shuffle quotes, filter by theme, search keywords, or turn any quote into a PNG poster.',
+        searchPlaceholder: 'Search quotes, authors, or keywords...',
+        allCategories: 'All Categories',
+        shuffle: 'Random Quote',
+        prev: '← Previous',
+        next: 'Next →',
+        save: 'Favorite',
+        saved: 'Favorited',
+        copyText: 'Copy Text',
+        copyFull: 'Copy + Author',
+        share: 'Share',
+        designPoster: 'Design PNG Poster',
+        relatedHeading: 'Related Quotes in This Theme',
+        favoritesLink: 'View All Favorites →',
+      };
+---
+
+<section class="section">
+  <div
+    id="quote-generator-app"
+    class="container"
+    data-quotes={JSON.stringify(serializedQuotes)}
+    data-default-locale={locale}
+  >
+    <Breadcrumb
+      items={[
+        { label: t.home, href: getLocalizedPath(locale, '/') },
+        { label: t.gen },
+      ]}
+    />
+
+    <div class="gen-header">
+      <div>
+        <h1 class="heading-serif gen-title">{t.title}</h1>
+        <p class="section-subtitle">{t.subtitle}</p>
+      </div>
+      <a href={getLocalizedPath(locale, '/favorites/')} class="btn btn-secondary">
+        {t.favoritesLink}
+      </a>
+    </div>
+
+    <div class="card gen-toolbar">
+      <input
+        id="gen-search-input"
+        type="search"
+        class="gen-input"
+        placeholder={t.searchPlaceholder}
+        aria-label={t.searchPlaceholder}
+      />
+
+      <select id="gen-category-select" class="gen-select" aria-label={t.allCategories}>
+        <option value="all">{t.allCategories}</option>
+        {categories.map((c) => <option value={c.id}>{c.name[locale]}</option>)}
+      </select>
+
+      <button id="gen-lang-toggle" type="button" class="btn btn-secondary">
+        {locale === 'en' ? 'EN → ID' : 'ID → EN'}
+      </button>
+
+      <button id="gen-random-btn" type="button" class="btn btn-gold">
+        🎲 {t.shuffle}
+      </button>
+    </div>
+
+    <div id="gen-status-toast" class="gen-toast" role="status" aria-live="polite" hidden></div>
+
+    <article class="card gen-stage">
+      <div class="gen-stage-top">
+        <div class="gen-badges">
+          <span id="gen-category-badge" class="badge">{firstLoc.category}</span>
+          <span id="gen-origin-badge" class="gen-origin">
+            {
+              first.isOriginal
+                ? locale === 'id'
+                  ? 'Kutipan Orisinal'
+                  : 'Original'
+                : locale === 'id'
+                  ? 'Arsip Terverifikasi'
+                  : 'Verified Archive'
+            }
+          </span>
+        </div>
+        <span id="gen-counter" class="gen-counter">1 / {serializedQuotes.length}</span>
+      </div>
+
+      <blockquote id="gen-quote-text" class="heading-serif gen-quote">“{firstLoc.text}”</blockquote>
+      <p id="gen-quote-author" class="gen-author">— {first.author}</p>
+      <p id="gen-quote-interp" class="gen-interp">{firstLoc.interpretation}</p>
+
+      <div class="gen-actions">
+        <button id="gen-prev-btn" type="button" class="btn btn-secondary">{t.prev}</button>
+        <button id="gen-next-btn" type="button" class="btn btn-secondary">{t.next}</button>
+        <button
+          id="gen-fav-btn"
+          type="button"
+          class="btn btn-secondary"
+          data-save-label={t.save}
+          data-saved-label={t.saved}
+          aria-pressed="false"
+        >
+          ☆ {t.save}
+        </button>
+        <button id="gen-copy-text-btn" type="button" class="btn btn-secondary">{t.copyText}</button>
+        <button id="gen-copy-full-btn" type="button" class="btn btn-secondary">{t.copyFull}</button>
+        <button id="gen-share-btn" type="button" class="btn btn-secondary">{t.share}</button>
+        <a
+          id="gen-designer-link"
+          href={`${getLocalizedPath(locale, '/designer/')}?quoteId=${first.id}&lang=${locale}`}
+          data-base-href={getLocalizedPath(locale, '/designer/')}
+          class="btn btn-primary"
+        >
+          {t.designPoster}
+        </a>
+      </div>
+    </article>
+
+    <AdSlot locale={locale} slotId="generator-mid-banner" format="banner" />
+
+    <div class="gen-related">
+      <h2 class="heading-serif gen-related-title">{t.relatedHeading}</h2>
+      <div id="gen-related-list" class="grid-3"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initQuoteGenerator } from '../scripts/quoteGenerator';
+  initQuoteGenerator();
+</script>
+
+<style>
+  .gen-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gen-title {
+    font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  }
+
+  .gen-toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 820px) {
+    .gen-toolbar {
+      grid-template-columns: 1.5fr 1fr auto auto;
+    }
+  }
+
+  .gen-input,
+  .gen-select {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-beige);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
+  }
+
+  .gen-toast {
+    margin-bottom: 1rem;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+    font-size: 0.88rem;
+  }
+
+  .gen-stage {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gen-stage-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .gen-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .gen-origin {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-gold-dark);
+  }
+
+  .gen-counter {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--color-charcoal-muted);
+  }
+
+  .gen-quote {
+    font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+    line-height: 1.38;
+  }
+
+  .gen-author {
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
+
+  .gen-interp {
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal-muted);
+    font-size: 0.94rem;
+  }
+
+  .gen-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-beige);
+  }
+
+  .gen-related {
+    margin-top: 2.5rem;
+  }
+
+  .gen-related-title {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(.related-item) {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.65rem;
+    cursor: pointer;
+  }
+
+  :global(.related-quote) {
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+  }
+
+  :global(.related-author) {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-charcoal-muted);
+  }
+</style>

@@ -1,0 +1,146 @@
+---
+import type { Locale } from '../types';
+import Breadcrumb from './Breadcrumb.astro';
+import QuoteCard from './QuoteCard.astro';
+import AdSlot from './AdSlot.astro';
+import { getAllCategories, getAllQuotes } from '../utils/repository';
+import { getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const categories = getAllCategories();
+const quotes = getAllQuotes();
+
+const t =
+  locale === 'id'
+    ? {
+        home: 'Beranda',
+        library: 'Pustaka Kutipan',
+        title: 'Pustaka Kutipan Dwibahasa',
+        subtitle: 'Telusuri 12 tema kurasi dan 108 kutipan dalam Bahasa Indonesia maupun Inggris.',
+        allThemes: 'Semua Tema',
+        quotesCount: 'kutipan',
+        featuredTitle: 'Kutipan Pilihan',
+        detailLink: 'Baca Makna & Detail →',
+      }
+    : {
+        home: 'Home',
+        library: 'Quote Library',
+        title: 'Bilingual Quote Library',
+        subtitle: 'Explore 12 curated themes and 108 quotes in English and Bahasa Indonesia.',
+        allThemes: 'All Themes',
+        quotesCount: 'quotes',
+        featuredTitle: 'Curated Quotes',
+        detailLink: 'Read Meaning & Details →',
+      };
+---
+
+<section class="section">
+  <div class="container">
+    <Breadcrumb
+      items={[
+        { label: t.home, href: getLocalizedPath(locale, '/') },
+        { label: t.library },
+      ]}
+    />
+
+    <div class="lib-header">
+      <h1 class="heading-serif lib-title">{t.title}</h1>
+      <p class="section-subtitle">{t.subtitle}</p>
+    </div>
+
+    <h2 class="heading-serif lib-subtitle">{t.allThemes}</h2>
+    <div class="grid-3">
+      {
+        categories.map((cat) => {
+          const count = quotes.filter((q) => q.categoryId === cat.id).length;
+          return (
+            <a href={getLocalizedPath(locale, `/quotes/${cat.slug[locale]}/`)} class="card cat-box">
+              <div class="cat-top">
+                <h3 class="heading-serif cat-title">{cat.name[locale]}</h3>
+                <span class="badge">{count} {t.quotesCount}</span>
+              </div>
+              <p class="cat-desc">{cat.description[locale]}</p>
+            </a>
+          );
+        })
+      }
+    </div>
+
+    <AdSlot locale={locale} slotId="library-mid-banner" format="banner" />
+
+    <h2 class="heading-serif lib-subtitle">{t.featuredTitle}</h2>
+    <div class="grid-2">
+      {
+        quotes.slice(0, 12).map((q) => (
+          <div class="lib-quote-wrap">
+            <QuoteCard quote={q} locale={locale} />
+            <a
+              href={getLocalizedPath(locale, `/quote/${q.slug[locale]}/`)}
+              class="lib-detail-link"
+            >
+              {t.detailLink}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .lib-header {
+    margin-bottom: 2rem;
+  }
+
+  .lib-title {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  }
+
+  .lib-subtitle {
+    font-size: 1.45rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .cat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .cat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cat-title {
+    font-size: 1.2rem;
+  }
+
+  .cat-desc {
+    font-size: 0.9rem;
+    color: var(--color-charcoal-muted);
+  }
+
+  .lib-quote-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .lib-detail-link {
+    align-self: flex-end;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-gold-dark);
+  }
+
+  .lib-detail-link:hover {
+    text-decoration: underline;
+  }
+</style>

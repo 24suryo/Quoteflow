@@ -1,0 +1,43 @@
+[
+  {
+    "id": "quoteflow-editorial",
+    "name": "QuoteFlow Editorial",
+    "bio": {
+      "en": "Original reflections crafted by the QuoteFlow editorial team.",
+      "id": "Refleksi orisinal yang disusun oleh tim editorial QuoteFlow."
+    },
+    "isOriginalBrand": true
+  },
+  {
+    "id": "marcus-aurelius",
+    "name": "Marcus Aurelius",
+    "bio": {
+      "en": "Roman Emperor (161–180 AD) and Stoic philosopher, author of Meditations.",
+      "id": "Kaisar Romawi (161–180 M) dan filsuf Stoa, penulis Meditations."
+    }
+  },
+  {
+    "id": "seneca",
+    "name": "Lucius Annaeus Seneca",
+    "bio": {
+      "en": "Roman Stoic philosopher, statesman, and dramatist.",
+      "id": "Filsuf Stoa Romawi, negarawan, dan penulis drama."
+    }
+  },
+  {
+    "id": "epictetus",
+    "name": "Epictetus",
+    "bio": {
+      "en": "Greek Stoic philosopher whose teachings were recorded in Discourses and Enchiridion.",
+      "id": "Filsuf Stoa Yunani yang ajarannya tercatat dalam Discourses dan Enchiridion."
+    }
+  },
+  {
+    "id": "lao-tzu",
+    "name": "Lao Tzu",
+    "bio": {
+      "en": "Ancient Chinese philosopher and foundational figure of Taoism.",
+      "id": "Filsuf Tiongkok kuno dan tokoh utama pendiri Taoisme."
+    }
+  }
+]

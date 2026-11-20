@@ -1,0 +1,408 @@
+---
+import type { Locale } from '../types';
+import { getAllQuotes, getAllTemplates } from '../utils/repository';
+import { ASPECT_PRESETS } from '../scripts/canvasRenderer';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const allQuotes = getAllQuotes();
+const allTemplates = getAllTemplates();
+
+const quoteOptions = allQuotes.map((q) => ({
+  id: q.id,
+  author: q.author.name,
+  enText: q.content.en,
+  idText: q.content.id,
+}));
+
+const templateOptions = allTemplates.map((t) => ({
+  id: t.id,
+  name: t.name[locale],
+  bgType: t.bgType,
+  bgColors: t.bgColors,
+  textColor: t.textColor,
+  accentColor: t.accentColor,
+  fontFamily: t.fontFamily,
+  textAlign: t.textAlign,
+  decoration: t.decoration,
+}));
+
+const t =
+  locale === 'id'
+    ? {
+        title: 'Studio Desain Poster Kutipan',
+        subtitle: 'Sesuaikan kutipan, template, tipografi, tata letak, dan unduh hasil akhir berformat PNG.',
+        selectQuote: 'Pilih Kutipan dari Pustaka',
+        quoteLang: 'Bahasa Kutipan',
+        quoteText: 'Teks Kutipan',
+        authorText: 'Penulis / Atribusi',
+        template: 'Template Bawaan',
+        aspect: 'Ukuran Format Kanvas',
+        bgType: 'Jenis Latar',
+        solid: 'Warna Solid',
+        gradient: 'Gradien',
+        bgPrimary: 'Warna Latar Utama',
+        bgSecondary: 'Warna Latar Kedua',
+        textColor: 'Warna Teks',
+        accentColor: 'Warna Aksen',
+        fontFamily: 'Jenis Huruf (Font)',
+        fontSize: 'Ukuran Huruf',
+        textAlign: 'Perataan Teks',
+        posY: 'Posisi Vertikal',
+        decoration: 'Elemen Dekorasi',
+        watermark: 'Tampilkan watermark QuoteFlow',
+        download: 'Unduh PNG',
+        previewHeading: 'Pratinjau Kanvas Langsung',
+      }
+    : {
+        title: 'Quote Image Poster Studio',
+        subtitle: 'Customize quotes, presets, typography, layout alignment, and download crisp PNG posters.',
+        selectQuote: 'Select Quote from Library',
+        quoteLang: 'Quote Language',
+        quoteText: 'Quote Text',
+        authorText: 'Author Attribution',
+        template: 'Preset Template',
+        aspect: 'Canvas Aspect Format',
+        bgType: 'Background Style',
+        solid: 'Solid Color',
+        gradient: 'Gradient',
+        bgPrimary: 'Primary Background',
+        bgSecondary: 'Secondary Background',
+        textColor: 'Text Color',
+        accentColor: 'Accent Color',
+        fontFamily: 'Typography Font',
+        fontSize: 'Font Size',
+        textAlign: 'Text Alignment',
+        posY: 'Vertical Position',
+        decoration: 'Decorative Element',
+        watermark: 'Include QuoteFlow watermark',
+        download: 'Download PNG',
+        previewHeading: 'Live Canvas Preview',
+      };
+---
+
+<section class="section">
+  <div
+    id="quote-designer-app"
+    class="container"
+    data-quotes={JSON.stringify(quoteOptions)}
+    data-templates={JSON.stringify(templateOptions)}
+    data-default-lang={locale}
+  >
+    <div class="dsn-header">
+      <div>
+        <h1 class="heading-serif dsn-title">{t.title}</h1>
+        <p class="section-subtitle">{t.subtitle}</p>
+      </div>
+      <button id="dsn-download-btn" type="button" class="btn btn-gold">
+        ⬇ {t.download}
+      </button>
+    </div>
+
+    <div id="dsn-status-msg" class="dsn-status" role="status" aria-live="polite" hidden></div>
+
+    <div class="dsn-layout">
+      <!-- Left: Controls Panel -->
+      <aside class="card dsn-controls">
+        <div class="dsn-row-2">
+          <label class="dsn-field">
+            <span>{t.selectQuote}</span>
+            <select id="dsn-quote-select" class="dsn-control">
+              {
+                quoteOptions.map((q) => (
+                  <option value={q.id}>
+                    {q.id.toUpperCase()} — {q.author}
+                  </option>
+                ))
+              }
+            </select>
+          </label>
+
+          <label class="dsn-field">
+            <span>{t.quoteLang}</span>
+            <select id="dsn-quote-lang" class="dsn-control">
+              <option value="en">English</option>
+              <option value="id">Bahasa Indonesia</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="dsn-field">
+          <span>{t.quoteText}</span>
+          <textarea id="dsn-quote-text" rows="3" class="dsn-control dsn-textarea"></textarea>
+        </label>
+
+        <label class="dsn-field">
+          <span>{t.authorText}</span>
+          <input id="dsn-author-text" type="text" class="dsn-control" />
+        </label>
+
+        <div class="dsn-row-2">
+          <label class="dsn-field">
+            <span>{t.template}</span>
+            <select id="dsn-template-select" class="dsn-control">
+              {templateOptions.map((tpl) => <option value={tpl.id}>{tpl.name}</option>)}
+            </select>
+          </label>
+
+          <label class="dsn-field">
+            <span>{t.aspect}</span>
+            <select id="dsn-aspect-select" class="dsn-control">
+              {
+                Object.values(ASPECT_PRESETS).map((p) => (
+                  <option value={p.id}>{p.label[locale]}</option>
+                ))
+              }
+            </select>
+          </label>
+        </div>
+
+        <div class="dsn-row-2">
+          <label class="dsn-field">
+            <span>{t.bgType}</span>
+            <select id="dsn-bg-type" class="dsn-control">
+              <option value="solid">{t.solid}</option>
+              <option value="gradient">{t.gradient}</option>
+            </select>
+          </label>
+
+          <label class="dsn-field">
+            <span>{t.fontFamily}</span>
+            <select id="dsn-font-family" class="dsn-control">
+              <option value="Playfair Display">Playfair Display</option>
+              <option value="Inter">Inter</option>
+              <option value="Lora">Lora</option>
+              <option value="Montserrat">Montserrat</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dsn-colors-grid">
+          <label class="dsn-color-field">
+            <span>{t.bgPrimary}</span>
+            <input id="dsn-bg-primary" type="color" value="#F3EFE6" />
+          </label>
+
+          <label class="dsn-color-field">
+            <span>{t.bgSecondary}</span>
+            <input id="dsn-bg-secondary" type="color" value="#E6E1D7" />
+          </label>
+
+          <label class="dsn-color-field">
+            <span>{t.textColor}</span>
+            <input id="dsn-text-color" type="color" value="#292820" />
+          </label>
+
+          <label class="dsn-color-field">
+            <span>{t.accentColor}</span>
+            <input id="dsn-accent-color" type="color" value="#B69A75" />
+          </label>
+        </div>
+
+        <div class="dsn-row-2">
+          <label class="dsn-field">
+            <span>
+              {t.fontSize}: <strong id="dsn-font-size-val">54px</strong>
+            </span>
+            <input id="dsn-font-size" type="range" min="28" max="96" step="2" value="54" />
+          </label>
+
+          <label class="dsn-field">
+            <span>
+              {t.posY}: <strong id="dsn-pos-y-val">0%</strong>
+            </span>
+            <input id="dsn-pos-y" type="range" min="-25" max="25" step="1" value="0" />
+          </label>
+        </div>
+
+        <div class="dsn-row-2">
+          <label class="dsn-field">
+            <span>{t.textAlign}</span>
+            <select id="dsn-text-align" class="dsn-control">
+              <option value="center">Center</option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </label>
+
+          <label class="dsn-field">
+            <span>{t.decoration}</span>
+            <select id="dsn-decoration" class="dsn-control">
+              <option value="border">Border Frame</option>
+              <option value="quote-marks">Quote Marks</option>
+              <option value="divider">Accent Divider</option>
+              <option value="none">Clean (None)</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="dsn-checkbox">
+          <input id="dsn-watermark" type="checkbox" checked />
+          <span>{t.watermark}</span>
+        </label>
+      </aside>
+
+      <!-- Right: Live Canvas Preview -->
+      <div class="card dsn-preview-panel">
+        <span class="badge">{t.previewHeading}</span>
+        <div class="canvas-frame">
+          <canvas id="poster-canvas" width="1080" height="1080"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initImageDesigner } from '../scripts/imageDesigner';
+  initImageDesigner();
+</script>
+
+<style>
+  .dsn-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dsn-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  }
+
+  .dsn-status {
+    margin-bottom: 1.25rem;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+    font-size: 0.88rem;
+  }
+
+  .dsn-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .dsn-layout {
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+  }
+
+  .dsn-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dsn-row-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 560px) {
+    .dsn-row-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .dsn-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
+
+  .dsn-control {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-beige);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 400;
+  }
+
+  .dsn-textarea {
+    resize: vertical;
+    min-height: 78px;
+  }
+
+  .dsn-colors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .dsn-color-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--color-beige);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-ivory);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .dsn-color-field input[type='color'] {
+    width: 34px;
+    height: 26px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .dsn-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .dsn-preview-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .canvas-frame {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-ivory);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+    border: 1px solid var(--color-beige);
+  }
+
+  #poster-canvas {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--shadow-subtle);
+  }
+</style>

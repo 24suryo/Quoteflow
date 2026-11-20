@@ -1,0 +1,69 @@
+---
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+  siteOrigin?: string;
+}
+
+const { items, siteOrigin = 'https://quoteflow.pages.dev' } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: item.label,
+    ...(item.href ? { item: new URL(item.href, siteOrigin).href } : {}),
+  })),
+};
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    {
+      items.map((item, idx) => (
+        <li class="breadcrumb-item">
+          {item.href ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
+          {idx < items.length - 1 && <span class="breadcrumb-sep" aria-hidden="true">/</span>}
+        </li>
+      ))
+    }
+  </ol>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</nav>
+
+<style>
+  .breadcrumb {
+    margin-bottom: 1.25rem;
+    font-size: 0.84rem;
+    color: var(--color-charcoal-muted);
+  }
+
+  .breadcrumb-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .breadcrumb-item a:hover {
+    color: var(--color-charcoal);
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.6;
+  }
+</style>

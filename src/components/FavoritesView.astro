@@ -1,0 +1,174 @@
+---
+import type { Locale } from '../types';
+import Breadcrumb from './Breadcrumb.astro';
+import { getAllQuotes } from '../utils/repository';
+import { getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const quotes = getAllQuotes();
+
+const payload = quotes.map((q) => ({
+  id: q.id,
+  author: q.author.name,
+  category: q.category.name[locale],
+  text: q.content[locale],
+  detailUrl: getLocalizedPath(locale, `/quote/${q.slug[locale]}/`),
+  designerUrl: `${getLocalizedPath(locale, '/designer/')}?quoteId=${q.id}&lang=${locale}`,
+}));
+
+const t =
+  locale === 'id'
+    ? {
+        home: 'Beranda',
+        fav: 'Favorit',
+        title: 'Kutipan Favorit & Riwayat',
+        subtitle: 'Tersimpan langsung di browser Anda (LocalStorage) tanpa memerlukan akun.',
+        favHeading: 'Kutipan Tersimpan',
+        histHeading: 'Terakhir Dilihat',
+        openGen: 'Buka Generator',
+      }
+    : {
+        home: 'Home',
+        fav: 'Favorites',
+        title: 'Saved Favorites & History',
+        subtitle: 'Stored locally in your browser (LocalStorage) with no account required.',
+        favHeading: 'Favorite Quotes',
+        histHeading: 'Recently Viewed',
+        openGen: 'Open Generator',
+      };
+---
+
+<section class="section">
+  <div
+    id="favorites-app"
+    class="container"
+    data-locale={locale}
+    data-quotes={JSON.stringify(payload)}
+  >
+    <Breadcrumb
+      items={[
+        { label: t.home, href: getLocalizedPath(locale, '/') },
+        { label: t.fav },
+      ]}
+    />
+
+    <div class="fav-header">
+      <div>
+        <h1 class="heading-serif fav-title">{t.title}</h1>
+        <p class="section-subtitle">{t.subtitle}</p>
+      </div>
+      <a href={getLocalizedPath(locale, '/generator/')} class="btn btn-primary">{t.openGen}</a>
+    </div>
+
+    <div class="fav-section-top">
+      <h2 class="heading-serif fav-sec-title">{t.favHeading}</h2>
+      <span id="fav-count-badge" class="badge">0</span>
+    </div>
+    <div id="fav-list-container" class="grid-2"></div>
+
+    <h2 class="heading-serif fav-sec-title hist-heading">{t.histHeading}</h2>
+    <div id="history-list-container" class="grid-2"></div>
+  </div>
+</section>
+
+<script>
+  import { initFavoritesPage } from '../scripts/favoritesPage';
+  initFavoritesPage();
+</script>
+
+<style>
+  .fav-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .fav-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  }
+
+  .fav-section-top {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .fav-sec-title {
+    font-size: 1.45rem;
+  }
+
+  .hist-heading {
+    margin-top: 3rem;
+    margin-bottom: 1.15rem;
+  }
+
+  :global(.empty-note) {
+    color: var(--color-charcoal-muted);
+    font-size: 0.95rem;
+  }
+
+  :global(.fav-card) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.9rem;
+  }
+
+  :global(.fav-quote) {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  :global(.fav-meta) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-beige);
+    font-size: 0.86rem;
+    color: var(--color-charcoal-muted);
+  }
+
+  :global(.fav-actions) {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  :global(.fav-btn-link),
+  :global(.fav-remove-btn) {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  :global(.hist-row) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  :global(.hist-quote) {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+  }
+
+  :global(.hist-author) {
+    font-size: 0.82rem;
+    color: var(--color-charcoal-muted);
+    font-weight: 600;
+  }
+</style>

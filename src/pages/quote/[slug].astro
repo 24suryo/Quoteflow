@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import QuoteCard from '../../components/QuoteCard.astro';
+import { getAllQuotes } from '../../utils/repository';
+import { getLocalizedPath } from '../../utils/i18n';
+import type { EnrichedQuote } from '../../types';
+
+export function getStaticPaths() {
+  const quotes = getAllQuotes();
+  return quotes.map((q) => ({
+    params: { slug: q.slug.en },
+    props: { quote: q, allQuotes: quotes },
+  }));
+}
+
+interface Props {
+  quote: EnrichedQuote;
+  allQuotes: EnrichedQuote[];
+}
+
+const { quote, allQuotes } = Astro.props;
+const related = allQuotes
+  .filter((item) => item.categoryId === quote.categoryId && item.id !== quote.id)
+  .slice(0, 3);
+const alternateUrl = getLocalizedPath('id', `/quote/${quote.slug.id}/`);
+---
+
+<BaseLayout
+  title={`${quote.author.name} — ${quote.category.name.en} Quote | QuoteFlow`}
+  description={quote.content.en}
+  locale="en"
+  alternateUrl={alternateUrl}
+>
+  <section class="section">
+    <div class="container">
+      <Breadcrumb
+        items={[
+          { label: 'Home', href: '/' },
+          { label: quote.category.name.en, href: `/quotes/${quote.category.slug.en}/` },
+          { label: quote.author.name },
+        ]}
+      />
+
+      <article class="card detail-box">
+        <div class="detail-top">
+          <span class="badge">{quote.category.name.en}</span>
+          <span class="detail-status">
+            {quote.isOriginal ? 'Original QuoteFlow Reflection' : 'Verified Historical Source'}
+          </span>
+        </div>
+
+        <h1 class="heading-serif detail-quote">“{quote.content.en}”</h1>
+        <p class="detail-author">— {quote.author.name}</p>
+
+        <div class="detail-translation">
+          <strong>Bahasa Indonesia:</strong> “{quote.content.id}”
+        </div>
+
+        <div class="detail-interp">
+          <h2 class="heading-serif detail-sub">Meaning & Reflection</h2>
+          <p>{quote.interpretation.en}</p>
+        </div>
+
+        {
+          !quote.isOriginal && quote.sourceUrl && (
+            <p class="detail-source">
+              Source reference:{' '}
+              <a href={quote.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {quote.sourceUrl}
+              </a>
+            </p>
+          )
+        }
+
+        <div class="detail-cta">
+          <a href={`/designer/?quoteId=${quote.id}&lang=en`} class="btn btn-gold">
+            Create Poster Image
+          </a>
+          <a href={`/generator/?quoteId=${quote.id}`} class="btn btn-secondary">
+            Open in Generator
+          </a>
+        </div>
+      </article>
+
+      <div class="rel-block">
+        <h2 class="heading-serif rel-title">More in {quote.category.name.en}</h2>
+        <div class="grid-3">
+          {related.map((r) => <QuoteCard quote={r} locale="en" />)}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .detail-box { padding: 2.25rem; }
+  .detail-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .detail-status { font-size: 0.82rem; font-weight: 600; color: var(--color-gold-dark); }
+  .detail-quote { font-size: clamp(1.6rem, 3vw, 2.35rem); margin-bottom: 0.75rem; }
+  .detail-author { font-weight: 600; color: var(--color-charcoal-muted); margin-bottom: 1.5rem; }
+  .detail-translation { background-color: var(--color-ivory); padding: 1rem 1.2rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; font-size: 0.96rem; }
+  .detail-sub { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .detail-interp p { color: var(--color-charcoal-muted); margin-bottom: 1.25rem; }
+  .detail-source { font-size: 0.84rem; color: var(--color-charcoal-muted); margin-bottom: 1.25rem; word-break: break-all; }
+  .detail-source a { text-decoration: underline; }
+  .detail-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .rel-block { margin-top: 3rem; }
+  .rel-title { font-size: 1.45rem; margin-bottom: 1.25rem; }
+</style>

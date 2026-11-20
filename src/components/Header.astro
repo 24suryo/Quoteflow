@@ -1,0 +1,214 @@
+---
+import type { Locale } from '../types';
+import { getStrings, getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+  alternateUrl: string;
+}
+
+const { locale, alternateUrl } = Astro.props;
+const t = getStrings(locale);
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: getLocalizedPath(locale, '/'), label: t.nav.home },
+  { href: getLocalizedPath(locale, '/generator/'), label: t.nav.generator },
+  { href: getLocalizedPath(locale, '/library/'), label: t.nav.library },
+  { href: getLocalizedPath(locale, '/designer/'), label: t.nav.designer },
+  { href: getLocalizedPath(locale, '/favorites/'), label: t.nav.favorites },
+  { href: getLocalizedPath(locale, '/blog/'), label: t.nav.blog },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={getLocalizedPath(locale, '/')} class="brand" aria-label={t.siteName}>
+      <span class="brand-mark" aria-hidden="true">“</span>
+      <span class="brand-text">{t.siteName}</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary Navigation">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={['nav-link', { active: currentPath === link.href }]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="header-actions">
+      <a
+        href={alternateUrl}
+        class="lang-switch"
+        hreflang={locale === 'en' ? 'id' : 'en'}
+        aria-label={`Switch language to ${t.actions.switchLangLabel}`}
+      >
+        <span class="lang-pill">{locale === 'en' ? 'EN → ID' : 'ID → EN'}</span>
+      </a>
+
+      <button
+        id="mobile-menu-toggle"
+        class="mobile-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav-drawer"
+        aria-label="Toggle Menu"
+      >
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav-drawer" class="mobile-nav" hidden aria-label="Mobile Navigation">
+    <div class="container mobile-nav-list">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={['mobile-nav-link', { active: currentPath === link.href }]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-nav-drawer');
+
+  toggleBtn?.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    if (drawer) drawer.hidden = isExpanded;
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background-color: rgba(243, 239, 230, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-beige);
+  }
+
+  .header-inner {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--color-charcoal);
+    color: var(--color-gold);
+    font-size: 1.5rem;
+    line-height: 1;
+    padding-top: 6px;
+  }
+
+  .desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  @media (min-width: 860px) {
+    .desktop-nav {
+      display: flex;
+    }
+    .mobile-toggle {
+      display: none;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--color-charcoal-muted);
+    transition: color var(--transition);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-charcoal);
+    font-weight: 600;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .lang-pill {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-beige);
+    color: var(--color-charcoal);
+  }
+
+  .lang-pill:hover {
+    border-color: var(--color-gold);
+  }
+
+  .mobile-toggle {
+    font-size: 1.3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-beige);
+    background-color: var(--color-white);
+  }
+
+  .mobile-nav {
+    border-top: 1px solid var(--color-beige);
+    background-color: var(--color-ivory);
+    padding-block: 1rem;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mobile-nav-link {
+    padding: 0.45rem 0.5rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+  }
+
+  .mobile-nav-link.active {
+    background-color: var(--color-beige);
+    font-weight: 600;
+  }
+</style>

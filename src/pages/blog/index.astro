@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getLatestArticles } from '../../utils/repository';
+
+const articles = getLatestArticles(10);
+---
+
+<BaseLayout
+  title="Journal & Articles — QuoteFlow"
+  description="Essays on daily reflection, habits, resilience, and minimalist visual design."
+  locale="en"
+  alternateUrl="/id/blog/"
+>
+  <section class="section">
+    <div class="container">
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Journal' }]} />
+      <h1 class="heading-serif blog-h1">QuoteFlow Journal</h1>
+      <p class="section-subtitle blog-sub">Short essays on reflection, habits, and calm focus.</p>
+
+      <div class="grid-2">
+        {
+          articles.map((art) => (
+            <article class="card art-card">
+              <span class="art-meta">{art.publishedAt} · {art.readingTimeMinutes} min read</span>
+              <h2 class="heading-serif art-title">
+                <a href={`/blog/${art.slug.en}/`}>{art.title.en}</a>
+              </h2>
+              <p class="art-excerpt">{art.excerpt.en}</p>
+              <a href={`/blog/${art.slug.en}/`} class="art-read">Read Article →</a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-h1 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
+  .blog-sub { margin-bottom: 2rem; }
+  .art-card { display: flex; flex-direction: column; gap: 0.65rem; }
+  .art-meta { font-size: 0.78rem; font-weight: 600; color: var(--color-gold-dark); }
+  .art-title { font-size: 1.35rem; }
+  .art-excerpt { color: var(--color-charcoal-muted); font-size: 0.95rem; }
+  .art-read { margin-top: auto; font-weight: 600; font-size: 0.9rem; }
+</style>

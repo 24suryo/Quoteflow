@@ -1,0 +1,112 @@
+[
+  {
+    "id": "art-001",
+    "slug": {
+      "en": "how-daily-reflection-builds-quiet-resilience",
+      "id": "bagaimana-refleksi-harian-membangun-ketangguhan-tenang"
+    },
+    "title": {
+      "en": "How Daily Reflection Builds Quiet Resilience",
+      "id": "Bagaimana Refleksi Harian Membangun Ketangguhan yang Tenang"
+    },
+    "excerpt": {
+      "en": "Why reading a single intentional thought each morning anchors your focus better than endless social feeds.",
+      "id": "Mengapa membaca satu gagasan bermakna setiap pagi menambatkan fokus lebih baik daripada linimasa tanpa ujung."
+    },
+    "content": {
+      "en": "Modern mornings often begin with reactive noise. Replacing the first five minutes of scrolling with a single grounded reflection shifts your posture from reactive to deliberate. Over weeks, small pauses help you respond to pressure with steadiness instead of urgency.",
+      "id": "Pagi hari modern sering kali dimulai dengan kebisingan reaktif. Mengganti lima menit pertama dengan satu refleksi bermakna mengubah sikap kita dari reaktif menjadi terarah. Dalam hitungan pekan, jeda singkat membantu merespons tekanan dengan tenang."
+    },
+    "categoryId": "wisdom",
+    "readingTimeMinutes": 4,
+    "publishedAt": "2026-02-01"
+  },
+  {
+    "id": "art-002",
+    "slug": {
+      "en": "designing-minimalist-quote-posters-that-resonate",
+      "id": "merancang-poster-kutipan-minimalis-yang-berkesan"
+    },
+    "title": {
+      "en": "Designing Minimalist Quote Posters That Resonate",
+      "id": "Merancang Poster Kutipan Minimalis yang Berkesan"
+    },
+    "excerpt": {
+      "en": "Practical typography, whitespace, and contrast principles for creating calm, readable visual quotes.",
+      "id": "Prinsip tipografi, ruang kosong, dan kontras praktis untuk membuat kutipan visual yang tenang dan mudah dibaca."
+    },
+    "content": {
+      "en": "Great quote design lets the words breathe. Generous margins, warm neutral backgrounds, and disciplined serif-sans pairings ensure your message stands out effortlessly across square feeds and vertical stories.",
+      "id": "Desain kutipan yang baik membiarkan kata-kata bernapas. Margin yang lega, latar netral yang hangat, serta paduan huruf yang terukur membuat pesan mudah terbaca di feed persegi maupun story vertikal."
+    },
+    "categoryId": "growth",
+    "readingTimeMinutes": 5,
+    "publishedAt": "2026-02-10"
+  },
+  {
+    "id": "art-003",
+    "slug": {
+      "en": "consistency-over-intensity-in-personal-growth",
+      "id": "konsistensi-melampaui-intensitas-dalam-pengembangan-diri"
+    },
+    "title": {
+      "en": "Consistency Over Intensity in Personal Growth",
+      "id": "Konsistensi Melampaui Intensitas dalam Pengembangan Diri"
+    },
+    "excerpt": {
+      "en": "Why sustainable habits depend on realistic daily pacing rather than occasional bursts of effort.",
+      "id": "Mengapa kebiasaan berkelanjutan bergantung pada ritme harian yang realistis, bukan ledakan usaha sesaat."
+    },
+    "content": {
+      "en": "Ambitious sprints often burn out before habits take root. By keeping daily actions modest and repeatable, you build a rhythm that survives busy workdays and low-energy mornings.",
+      "id": "Dorongan besar sesaat sering habis sebelum kebiasaan sempat berakar. Dengan menjaga langkah harian tetap wajar dan dapat diulang, ritme tetap terjaga di hari kerja yang padat maupun saat energi menurun."
+    },
+    "categoryId": "discipline",
+    "readingTimeMinutes": 4,
+    "publishedAt": "2026-02-18"
+  },
+  {
+    "id": "art-004",
+    "slug": {
+      "en": "reframing-setbacks-without-losing-direction",
+      "id": "memaknai-ulang-hambatan-tanpa-kehilangan-arah"
+    },
+    "title": {
+      "en": "Reframing Setbacks Without Losing Direction",
+      "id": "Memaknai Ulang Hambatan Tanpa Kehilangan Arah"
+    },
+    "excerpt": {
+      "en": "How to separate temporary obstacles from long-term purpose when plans do not go as expected.",
+      "id": "Cara memisahkan hambatan sementara dari tujuan jangka panjang saat rencana tidak berjalan mulus."
+    },
+    "content": {
+      "en": "Setbacks feel heaviest when we treat them as final verdicts. Reviewing what happened with calm curiosity helps extract practical lessons so your next step is more informed.",
+      "id": "Hambatan terasa paling berat ketika dianggap sebagai keputusan akhir. Meninjau peristiwa dengan rasa ingin tahu yang tenang membantu mengambil pelajaran praktis untuk langkah berikutnya."
+    },
+    "categoryId": "failure",
+    "readingTimeMinutes": 5,
+    "publishedAt": "2026-02-25"
+  },
+  {
+    "id": "art-005",
+    "slug": {
+      "en": "bilingual-writing-preserving-meaning-across-languages",
+      "id": "menulis-dwibahasa-menjaga-makna-lintas-bahasa"
+    },
+    "title": {
+      "en": "Bilingual Writing: Preserving Meaning Across Languages",
+      "id": "Menulis Dwibahasa: Menjaga Makna Lintas Bahasa"
+    },
+    "excerpt": {
+      "en": "Why natural phrasing in English and Bahasa Indonesia matters more than literal word-for-word translation.",
+      "id": "Mengapa susunan kalimat yang alami dalam bahasa Inggris dan Indonesia lebih penting daripada terjemahan harfiah."
+    },
+    "content": {
+      "en": "Idioms and cadence differ between English and Bahasa Indonesia. Writing and adapting reflections with natural rhythm ensures the emotional weight and clarity remain intact in both languages.",
+      "id": "Ungkapan dan ritme kalimat berbeda antara bahasa Inggris dan bahasa Indonesia. Menyesuaikan refleksi dengan bahasa yang wajar menjaga bobot makna dan kejernihan di kedua bahasa."
+    },
+    "categoryId": "wisdom",
+    "readingTimeMinutes": 4,
+    "publishedAt": "2026-03-04"
+  }
+]

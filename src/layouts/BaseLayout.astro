@@ -1,0 +1,85 @@
+---
+import type { Locale } from '../types';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getMonetizationConfig } from '../utils/monetization';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  alternateUrl: string;
+}
+
+const { title, description, locale, alternateUrl } = Astro.props;
+const siteOrigin = Astro.site?.origin ?? 'https://quoteflow.pages.dev';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+const altFullUrl = new URL(alternateUrl, siteOrigin).href;
+
+const enUrl = locale === 'en' ? canonicalUrl : altFullUrl;
+const idUrl = locale === 'id' ? canonicalUrl : altFullUrl;
+
+const { gaMeasurementId, adsenseClientId, hasGa, hasAdsense } = getMonetizationConfig();
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#292820" />
+
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="id" href={idUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    {
+      hasGa && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
+          <script
+            is:inline
+            set:html={`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaMeasurementId}');`}
+          />
+        </>
+      )
+    }
+
+    {
+      hasAdsense && (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+          crossorigin="anonymous"
+        />
+      )
+    }
+  </head>
+  <body data-locale={locale}>
+    <Header locale={locale} alternateUrl={alternateUrl} />
+    <main>
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <script>
+      import { initPwaClient } from '../scripts/pwaClient';
+      const bodyLocale = document.body.dataset.locale === 'id' ? 'id' : 'en';
+      initPwaClient(bodyLocale);
+    </script>
+  </body>
+</html>

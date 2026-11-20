@@ -1,0 +1,108 @@
+---
+import type { EnrichedQuote, Locale } from '../types';
+import { getStrings, getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  quote: EnrichedQuote;
+  locale: Locale;
+}
+
+const { quote, locale } = Astro.props;
+const t = getStrings(locale);
+const categoryUrl = getLocalizedPath(locale, `/quotes/${quote.category.slug[locale]}/`);
+const designerUrl = `${getLocalizedPath(locale, '/designer/')}?quoteId=${quote.id}`;
+---
+
+<article class="card quote-card" data-quote-id={quote.id}>
+  <div class="quote-card-top">
+    <a href={categoryUrl} class="badge">{quote.category.name[locale]}</a>
+    {quote.isOriginal && <span class="original-tag">Original</span>}
+  </div>
+
+  <blockquote class="quote-body">
+    “{quote.content[locale]}”
+  </blockquote>
+
+  <div class="quote-card-bottom">
+    <span class="quote-author">— {quote.author.name}</span>
+    <div class="quote-card-actions">
+      <button
+        type="button"
+        class="icon-action copy-quote-btn"
+        data-text={`"${quote.content[locale]}" — ${quote.author.name}`}
+        data-copied-label={t.actions.copied}
+        data-default-label={t.actions.copy}
+      >
+        {t.actions.copy}
+      </button>
+      <a href={designerUrl} class="icon-action design-link">
+        {t.actions.design}
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .quote-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.1rem;
+  }
+
+  .quote-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .original-tag {
+    font-size: 0.72rem;
+    color: var(--color-gold-dark);
+    font-weight: 600;
+  }
+
+  .quote-body {
+    font-family: var(--font-serif);
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--color-charcoal);
+  }
+
+  .quote-card-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--color-beige);
+  }
+
+  .quote-author {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-charcoal-muted);
+  }
+
+  .quote-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon-action {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    transition: background-color var(--transition);
+  }
+
+  .icon-action:hover {
+    background-color: var(--color-beige);
+  }
+</style>

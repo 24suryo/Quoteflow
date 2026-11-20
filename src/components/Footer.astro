@@ -1,0 +1,80 @@
+---
+import type { Locale } from '../types';
+import { getStrings, getLocalizedPath } from '../utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getStrings(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <strong class="footer-logo">{t.siteName}</strong>
+      <p class="footer-tagline">{t.tagline}</p>
+    </div>
+
+    <div class="footer-links">
+      <a href={getLocalizedPath(locale, '/about/')}>{t.footer.about}</a>
+      <a href={getLocalizedPath(locale, '/contact/')}>{t.footer.contact}</a>
+      <a href={getLocalizedPath(locale, '/privacy-policy/')}>{t.footer.privacy}</a>
+      <a href={getLocalizedPath(locale, '/terms/')}>{t.footer.terms}</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© {year} {t.siteName}. {t.footer.copyright}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 4rem;
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+    padding-block: 3rem 2rem;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(243, 239, 230, 0.14);
+  }
+
+  .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--color-gold);
+  }
+
+  .footer-tagline {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    color: rgba(243, 239, 230, 0.78);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-gold);
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    font-size: 0.82rem;
+    color: rgba(243, 239, 230, 0.65);
+  }
+</style>

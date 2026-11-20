@@ -1,0 +1,122 @@
+[
+  {
+    "id": "motivation",
+    "slug": { "en": "motivation", "id": "motivasi" },
+    "name": { "en": "Motivation", "id": "Motivasi" },
+    "description": {
+      "en": "Fuel your momentum with grounded reflections on action, purpose, and inner drive.",
+      "id": "Bangkitkan momentum Anda dengan refleksi membumi tentang tindakan, tujuan, dan dorongan diri."
+    },
+    "icon": "sparkles"
+  },
+  {
+    "id": "success",
+    "slug": { "en": "success", "id": "kesuksesan" },
+    "name": { "en": "Success", "id": "Kesuksesan" },
+    "description": {
+      "en": "Thoughtful perspectives on meaningful achievement, patience, and lasting impact.",
+      "id": "Perspektif mendalam tentang pencapaian bermakna, kesabaran, dan dampak jangka panjang."
+    },
+    "icon": "award"
+  },
+  {
+    "id": "failure",
+    "slug": { "en": "failure", "id": "kegagalan" },
+    "name": { "en": "Failure", "id": "Kegagalan" },
+    "description": {
+      "en": "Reframe setbacks as essential lessons on the path to resilience and mastery.",
+      "id": "Ubah hambatan menjadi pelajaran penting dalam perjalanan menuju ketangguhan."
+    },
+    "icon": "compass"
+  },
+  {
+    "id": "life",
+    "slug": { "en": "life", "id": "kehidupan" },
+    "name": { "en": "Life", "id": "Kehidupan" },
+    "description": {
+      "en": "Everyday reflections on presence, balance, seasons of change, and living deliberately.",
+      "id": "Refleksi keseharian tentang kehadiran penuh, keseimbangan, dan menjalani hidup secara sadar."
+    },
+    "icon": "sun"
+  },
+  {
+    "id": "self-improvement",
+    "slug": { "en": "self-improvement", "id": "pengembangan-diri" },
+    "name": { "en": "Self Improvement", "id": "Pengembangan Diri" },
+    "description": {
+      "en": "Practical reminders for sharpening character, self-awareness, and lifelong learning.",
+      "id": "Pengingat praktis untuk mengasah karakter, kesadaran diri, dan semangat belajar."
+    },
+    "icon": "trending-up"
+  },
+  {
+    "id": "discipline",
+    "slug": { "en": "discipline", "id": "disiplin" },
+    "name": { "en": "Discipline", "id": "Disiplin" },
+    "description": {
+      "en": "Quiet consistency over fleeting intensity: quotes on self-mastery and daily habits.",
+      "id": "Konsistensi tenang melampaui semangat sesaat: kutipan tentang penguasaan diri dan kebiasaan."
+    },
+    "icon": "shield"
+  },
+  {
+    "id": "friendship",
+    "slug": { "en": "friendship", "id": "persahabatan" },
+    "name": { "en": "Friendship", "id": "Persahabatan" },
+    "description": {
+      "en": "Warmth, loyalty, honest candor, and the quiet comfort of enduring companionship.",
+      "id": "Kehangatan, kesetiaan, kejujuran, dan rasa nyaman dari persahabatan yang bertahan lama."
+    },
+    "icon": "users"
+  },
+  {
+    "id": "love",
+    "slug": { "en": "love", "id": "cinta" },
+    "name": { "en": "Love", "id": "Cinta" },
+    "description": {
+      "en": "Gentle truths on care, patience, mutual respect, and everyday devotion.",
+      "id": "Kebenaran lembut tentang kepedulian, kesabaran, saling menghormati, dan ketulusan sehari-hari."
+    },
+    "icon": "heart"
+  },
+  {
+    "id": "happiness",
+    "slug": { "en": "happiness", "id": "kebahagiaan" },
+    "name": { "en": "Happiness", "id": "Kebahagiaan" },
+    "description": {
+      "en": "Gratitude, contentment, and finding joy in simple moments without rushing.",
+      "id": "Rasa syukur, kecukupan batin, dan menemukan sukacita pada hal sederhana tanpa tergesa."
+    },
+    "icon": "smile"
+  },
+  {
+    "id": "wisdom",
+    "slug": { "en": "wisdom", "id": "kebijaksanaan" },
+    "name": { "en": "Wisdom", "id": "Kebijaksanaan" },
+    "description": {
+      "en": "Timeless philosophical insights for clarity, perspective, and calm judgment.",
+      "id": "Wawasan filosofis abadi untuk kejernihan pikiran, sudut pandang, dan ketenangan."
+    },
+    "icon": "book"
+  },
+  {
+    "id": "career",
+    "slug": { "en": "career", "id": "karier" },
+    "name": { "en": "Career", "id": "Karier" },
+    "description": {
+      "en": "Craftsmanship, accountability, quiet leadership, and building work that matters.",
+      "id": "Kualitas kerja, tanggung jawab, kepemimpinan tenang, dan membangun karya yang berarti."
+    },
+    "icon": "briefcase"
+  },
+  {
+    "id": "growth",
+    "slug": { "en": "growth", "id": "pertumbuhan" },
+    "name": { "en": "Growth", "id": "Pertumbuhan" },
+    "description": {
+      "en": "Embrace continuous evolution, curiosity, and stepping beyond familiar comfort.",
+      "id": "Rangkul evolusi berkelanjutan, rasa ingin tahu, dan keberanian melangkah maju."
+    },
+    "icon": "seedling"
+  }
+]
