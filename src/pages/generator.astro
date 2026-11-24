@@ -1,13 +1,190 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteGeneratorView from '../components/QuoteGeneratorView.astro';
+import EphemeralQuoteBox from '../components/EphemeralQuoteBox.astro';
 ---
 
 <BaseLayout
-  title="Quote Generator — QuoteFlow"
-  description="Generate random quotes, filter by category, search keywords, save favorites, and share bilingual reflections."
+  title="QuoteFlow Generator — Library & Custom Studio"
+  description="Browse curated quotes or create custom temporary quote cards."
   locale="en"
   alternateUrl="/id/generator/"
 >
-  <QuoteGeneratorView locale="en" />
+  <section class="qf-gen-header">
+    <div class="qf-gen-badges">
+      <span class="qf-tag">Curated Library</span>
+      <span class="qf-tag qf-tag-solid">Custom Studio</span>
+    </div>
+    <h1 class="heading-serif">Quote Generator</h1>
+    <p>
+      Pilih kutipan dari pustaka atau susun kutipan kustom dengan latar belakang sementara secara langsung.
+    </p>
+  </section>
+
+  <main class="qf-gen-grid" aria-label="Quote Generator Workspace">
+    <section class="qf-panel">
+      <div class="qf-panel-head">
+        <span class="qf-step">01 • Library</span>
+        <h2>Curated Quotes</h2>
+      </div>
+      <div class="qf-panel-body">
+        <QuoteGeneratorView locale="en" />
+      </div>
+    </section>
+
+    <section class="qf-panel">
+      <div class="qf-panel-head">
+        <span class="qf-step">02 • Custom Studio</span>
+        <h2>Custom Quote Card</h2>
+      </div>
+      <div class="qf-panel-body">
+        <EphemeralQuoteBox locale="en" />
+      </div>
+    </section>
+  </main>
+
+  <script is:inline>
+    // Pengaman klik tombol pada kolom Library jika listener bawaan belum terpasang
+    (function () {
+      const root = document.querySelector('.qf-panel');
+      if (!root) return;
+
+      const fallbackQuotes = [
+        { text: 'Small steady steps build unshakable momentum.', author: 'QuoteFlow' },
+        { text: 'Clarity arrives when noise is turned down.', author: 'QuoteFlow' },
+        { text: 'Discipline is choosing what matters most today.', author: 'QuoteFlow' },
+      ];
+      let idx = 0;
+
+      root.addEventListener('click', function (e) {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const label = (btn.textContent || '').toLowerCase();
+
+        // Jika tombol shuffle/new quote tidak mengubah teks dalam 60ms, bantu update teks kutipan
+        if (label.includes('new') || label.includes('shuffle') || label.includes('acak') || label.includes('kutipan baru')) {
+          const quoteEl = root.querySelector('blockquote, [data-quote-text], .quote-text, #gen-quote-text');
+          const authorEl = root.querySelector('[data-quote-author], .quote-author, #gen-quote-author, cite');
+          const before = quoteEl ? quoteEl.textContent : '';
+          setTimeout(() => {
+            const after = quoteEl ? quoteEl.textContent : '';
+            if (quoteEl && before === after) {
+              idx = (idx + 1) % fallbackQuotes.length;
+              quoteEl.textContent = fallbackQuotes[idx].text;
+              if (authorEl) authorEl.textContent = '— ' + fallbackQuotes[idx].author;
+            }
+          }, 60);
+        }
+
+        // Jika tombol copy diklik, salin kutipan yang tampil ke clipboard
+        if (label.includes('copy') || label.includes('salin')) {
+          const quoteEl = root.querySelector('blockquote, [data-quote-text], .quote-text, #gen-quote-text');
+          const textToCopy = quoteEl ? (quoteEl.textContent || '').trim() : '';
+          if (textToCopy && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textToCopy).catch(() => {});
+          }
+        }
+      });
+    })();
+  </script>
 </BaseLayout>
+
+<style>
+  .qf-gen-header {
+    max-width: 1200px;
+    margin: 1.75rem auto 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .qf-gen-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .qf-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(24, 28, 34, 0.16);
+    background: #ffffff;
+    color: #181c22;
+  }
+
+  .qf-tag-solid {
+    background: #181c22;
+    color: #ffffff;
+    border-color: #181c22;
+  }
+
+  .qf-gen-header h1 {
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    color: #181c22;
+  }
+
+  .qf-gen-header p {
+    margin: 0 auto;
+    max-width: 640px;
+    font-size: 0.95rem;
+    color: #4b5563;
+  }
+
+  .qf-gen-grid {
+    max-width: 1280px;
+    margin: 1.5rem auto 3rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .qf-gen-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+  }
+
+  .qf-panel {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid rgba(24, 28, 34, 0.12);
+    border-radius: 14px;
+    padding: 1.15rem;
+    box-shadow: 0 6px 20px rgba(24, 28, 34, 0.04);
+  }
+
+  .qf-panel-head {
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(24, 28, 34, 0.08);
+  }
+
+  .qf-step {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+  }
+
+  .qf-panel-head h2 {
+    margin: 0.2rem 0 0;
+    font-size: 1.15rem;
+    color: #181c22;
+  }
+
+  .qf-panel-body :global(.eq-card) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+</style>

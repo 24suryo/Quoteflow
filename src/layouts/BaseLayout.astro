@@ -1,4 +1,4 @@
----
+﻿---
 import type { Locale } from '../types';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -81,5 +81,36 @@ const { gaMeasurementId, adsenseClientId, hasGa, hasAdsense } = getMonetizationC
       const bodyLocale = document.body.dataset.locale === 'id' ? 'id' : 'en';
       initPwaClient(bodyLocale);
     </script>
-  </body>
+  <script is:inline>
+  (function () {
+    const currentPath = window.location.pathname || '/';
+    const isId = currentPath === '/id' || currentPath.startsWith('/id/');
+
+    function computeTargetUrl(anchor) {
+      const explicitAlt = anchor.getAttribute('data-alternate-url') || anchor.getAttribute('href');
+      if (isId) {
+        // Dari /id/... ke /...
+        const stripped = currentPath.replace(/^\/id(\/|$)/, '/');
+        return stripped === '' ? '/' : stripped;
+      } else {
+        // Dari /... ke /id/...
+        if (currentPath === '/' || currentPath === '') return '/id/';
+        return '/id' + (currentPath.startsWith('/') ? currentPath : '/' + currentPath);
+      }
+    }
+
+    document.querySelectorAll('a').forEach((a) => {
+      const txt = (a.textContent || '').replace(/\s+/g, ' ').trim();
+      if (/^(EN\s*->\s*ID|ID\s*->\s*EN|EN\s*\/\s*ID|ID\s*\/\s*EN|Bahasa|Language)$/i.test(txt)) {
+        const target = computeTargetUrl(a);
+        a.setAttribute('href', target);
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.location.assign(target);
+        });
+      }
+    });
+  })();
+</script>
+</body>
 </html>

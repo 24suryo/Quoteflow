@@ -1,228 +1,86 @@
----
+﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import QuoteCard from '../components/QuoteCard.astro';
-import AdSlot from '../components/AdSlot.astro';
-import { getStrings, getLocalizedPath } from '../utils/i18n';
-import {
-  getAllCategories,
-  getAllQuotes,
-  getFeaturedQuotes,
-  getQuoteOfTheDay,
-  getLatestArticles,
-} from '../utils/repository';
+import { UI_STRINGS } from '../utils/i18n';
 
-const locale = 'en';
-const t = getStrings(locale);
-const qotd = getQuoteOfTheDay();
-const categories = getAllCategories();
-const popularQuotes = getFeaturedQuotes(4);
-const articles = getLatestArticles(2);
-
-const previewPayload = getAllQuotes().map((q) => ({
-  id: q.id,
-  text: q.content[locale],
-  author: q.author.name,
-  category: q.category.name[locale],
-}));
+const locale: 'en' | 'id' = 'en';
+const t: any = UI_STRINGS[locale] ?? UI_STRINGS.en;
 ---
 
 <BaseLayout
-  title="QuoteFlow — Words that move you forward."
-  description="Bilingual inspirational quote generator and minimalist poster designer in English and Bahasa Indonesia."
+  title="QuoteFlow — Words That Move You Forward"
+  description="Bilingual quotes and custom quote studio."
   locale={locale}
   alternateUrl="/id/"
 >
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="badge">{t.hero.badge}</span>
-        <h1 class="heading-serif hero-title">{t.hero.title}</h1>
-        <p class="hero-subtitle">{t.hero.subtitle}</p>
-        <div class="hero-cta-group">
-          <a href={getLocalizedPath(locale, '/generator/')} class="btn btn-primary">
-            {t.hero.primaryCta}
-          </a>
-          <a href={getLocalizedPath(locale, '/designer/')} class="btn btn-secondary">
-            {t.hero.secondaryCta}
-          </a>
-        </div>
-      </div>
-
-      <aside class="qotd-box">
-        <span class="qotd-label">{t.sections.qotdLabel}</span>
-        <blockquote class="qotd-quote">“{qotd.content[locale]}”</blockquote>
-        <div class="qotd-meta">
-          <span>— {qotd.author.name}</span>
-          <a href={getLocalizedPath(locale, `/quotes/${qotd.category.slug[locale]}/`)} class="badge">
-            {qotd.category.name[locale]}
-          </a>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">{t.sections.previewTitle}</h2>
-          <p class="section-subtitle">{t.sections.previewSubtitle}</p>
-        </div>
-        <a href={getLocalizedPath(locale, '/generator/')} class="btn btn-secondary">
-          {t.actions.viewAll} →
-        </a>
-      </div>
-
-      <div
-        id="home-generator-preview"
-        class="card generator-preview-box"
-        data-quotes={JSON.stringify(previewPayload)}
-        data-designer-url={getLocalizedPath(locale, '/designer/')}
-      >
-        <span id="preview-quote-category" class="badge">{previewPayload[0].category}</span>
-        <blockquote id="preview-quote-text" class="preview-quote-text">
-          “{previewPayload[0].text}”
-        </blockquote>
-        <p id="preview-quote-author" class="preview-quote-author">— {previewPayload[0].author}</p>
-
-        <div class="preview-controls">
-          <button id="preview-shuffle-btn" type="button" class="btn btn-primary">
-            ↻ {t.actions.shuffle}
-          </button>
-          <button
-            id="preview-copy-btn"
-            type="button"
-            class="btn btn-secondary"
-            data-default-label={t.actions.copy}
-            data-copied-label={t.actions.copied}
-          >
-            {t.actions.copy}
-          </button>
-          <a
-            id="preview-design-link"
-            href={`${getLocalizedPath(locale, '/designer/')}?quoteId=${previewPayload[0].id}`}
-            class="btn btn-gold"
-          >
-            {t.actions.design}
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">{t.sections.categoriesTitle}</h2>
-          <p class="section-subtitle">{t.sections.categoriesSubtitle}</p>
-        </div>
-      </div>
-
-      <div class="grid-3">
-        {
-          categories.map((cat) => (
-            <a href={getLocalizedPath(locale, `/quotes/${cat.slug[locale]}/`)} class="card category-card">
-              <h3 class="heading-serif category-name">{cat.name[locale]}</h3>
-              <p class="category-desc">{cat.description[locale]}</p>
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <AdSlot locale={locale} slotId="home-mid-banner" format="banner" />
-  </div>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{t.sections.popularTitle}</h2>
-        <a href={getLocalizedPath(locale, '/library/')} class="btn btn-secondary">
-          {t.actions.viewAll} →
-        </a>
-      </div>
-
-      <div class="grid-2">
-        {popularQuotes.map((quote) => <QuoteCard quote={quote} locale={locale} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{t.sections.articlesTitle}</h2>
-        <a href={getLocalizedPath(locale, '/blog/')} class="btn btn-secondary">
-          {t.actions.viewAll} →
-        </a>
-      </div>
-
-      <div class="grid-2">
-        {
-          articles.map((article) => (
-            <article class="card article-card">
-              <span class="article-meta">{article.readingTimeMinutes} min read</span>
-              <h3 class="heading-serif article-title">
-                <a href={getLocalizedPath(locale, `/blog/${article.slug[locale]}/`)}>
-                  {article.title[locale]}
-                </a>
-              </h3>
-              <p class="article-excerpt">{article.excerpt[locale]}</p>
-              <a
-                href={getLocalizedPath(locale, `/blog/${article.slug[locale]}/`)}
-                class="article-link"
-              >
-                {t.actions.readArticle} →
-              </a>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <div class="cta-banner">
-      <h2 class="heading-serif">{t.sections.ctaTitle}</h2>
-      <p>{t.sections.ctaSubtitle}</p>
-      <a href={getLocalizedPath(locale, '/designer/')} class="btn btn-gold">
-        {t.sections.ctaButton}
+  <section class="qf-home-hero">
+    <span class="qf-kicker">Bilingual Quote Studio</span>
+    <h1 class="heading-serif">{t?.hero?.title ?? 'Words that move you forward.'}</h1>
+    <p>
+      {t?.hero?.subtitle ?? 'Discover curated quotes or craft custom temporary quote cards in English and Bahasa Indonesia.'}
+    </p>
+    <div class="qf-home-actions">
+      <a href="/generator/" class="qf-btn-primary">
+        {t?.hero?.primaryCta ?? 'Open Generator'}
       </a>
     </div>
   </section>
 </BaseLayout>
 
-<script>
-  import { initHomePreview } from '../scripts/homePreview';
-  initHomePreview();
-</script>
-
 <style>
-  .hero { padding-block: 4rem 3rem; border-bottom: 1px solid var(--color-beige); }
-  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
-  @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.2fr 0.9fr; } }
-  .hero-title { font-size: clamp(2.2rem, 4vw, 3.3rem); margin-block: 1rem; }
-  .hero-subtitle { font-size: 1.08rem; color: var(--color-charcoal-muted); max-width: 56ch; margin-bottom: 1.75rem; }
-  .hero-cta-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
-  .qotd-box { background-color: var(--color-charcoal); color: var(--color-ivory); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-elevated); }
-  .qotd-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); font-weight: 600; }
-  .qotd-quote { font-family: var(--font-serif); font-size: 1.35rem; line-height: 1.5; margin-block: 1.1rem 1.4rem; }
-  .qotd-meta { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: rgba(243, 239, 230, 0.85); }
-  .generator-preview-box { text-align: center; padding: 2.5rem 1.75rem; }
-  .preview-quote-text { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.5vw, 1.85rem); max-width: 34ch; margin: 1.25rem auto 0.75rem; }
-  .preview-quote-author { font-weight: 600; color: var(--color-charcoal-muted); margin-bottom: 1.75rem; }
-  .preview-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
-  .category-name { font-size: 1.25rem; margin-bottom: 0.45rem; }
-  .category-desc { font-size: 0.92rem; color: var(--color-charcoal-muted); }
-  .article-card { display: flex; flex-direction: column; gap: 0.65rem; }
-  .article-meta { font-size: 0.78rem; font-weight: 600; color: var(--color-gold-dark); }
-  .article-title { font-size: 1.3rem; }
-  .article-excerpt { color: var(--color-charcoal-muted); font-size: 0.95rem; }
-  .article-link { margin-top: auto; font-weight: 600; font-size: 0.9rem; color: var(--color-charcoal); }
-  .cta-banner { background-color: var(--color-charcoal); color: var(--color-ivory); border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; }
-  .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: 0.75rem; }
-  .cta-banner p { max-width: 54ch; margin: 0 auto 1.5rem; color: rgba(243, 239, 230, 0.82); }
+  .qf-home-hero {
+    max-width: 780px;
+    margin: 4rem auto;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .qf-kicker {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4b5563;
+    background: rgba(24, 28, 34, 0.06);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .qf-home-hero h1 {
+    margin: 0 0 0.85rem;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.15;
+    color: #181c22;
+  }
+
+  .qf-home-hero p {
+    margin: 0 auto 1.75rem;
+    max-width: 580px;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #4b5563;
+  }
+
+  .qf-home-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .qf-btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.35rem;
+    border-radius: 10px;
+    background: #181c22;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.15s ease;
+  }
+
+  .qf-btn-primary:hover {
+    background: #2c333e;
+  }
 </style>

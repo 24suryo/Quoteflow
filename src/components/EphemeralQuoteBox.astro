@@ -1,0 +1,496 @@
+﻿---
+import { QUOTE_THEME_PRESETS, QUOTE_UI_COPY, type QuoteLocale } from '../lib/ephemeralQuote';
+
+interface Props {
+  locale?: QuoteLocale;
+}
+
+const initialLocale: QuoteLocale = Astro.props.locale === 'en' ? 'en' : 'id';
+const initialCopy = QUOTE_UI_COPY[initialLocale];
+---
+
+<section
+  id="ephemeral-quote-box"
+  class="eq-card"
+  data-initial-locale={initialLocale}
+>
+  <div class="eq-topbar">
+    <p id="eq-status" class="eq-status">
+      {initialCopy.ephemeralNotice}
+    </p>
+    <div class="eq-lang-switch" role="group" aria-label="Language / Bahasa">
+      <button
+        type="button"
+        data-lang="id"
+        class:list={['eq-btn eq-lang-btn', initialLocale === 'id' && 'is-active']}
+      >
+        ID
+      </button>
+      <button
+        type="button"
+        data-lang="en"
+        class:list={['eq-btn eq-lang-btn', initialLocale === 'en' && 'is-active']}
+      >
+        EN
+      </button>
+    </div>
+  </div>
+
+  <div class="eq-field">
+    <label id="eq-quote-label" for="eq-quote" class="eq-label">
+      {initialCopy.quoteLabel}
+    </label>
+    <textarea
+      id="eq-quote"
+      rows="4"
+      placeholder={initialCopy.quotePlaceholder}
+      class="eq-textarea"
+    ></textarea>
+  </div>
+
+  <div class="eq-field">
+    <label id="eq-author-label" for="eq-author" class="eq-label">
+      {initialCopy.authorLabel}
+    </label>
+    <input
+      id="eq-author"
+      type="text"
+      placeholder={initialCopy.authorPlaceholder}
+      class="eq-input"
+    />
+  </div>
+
+  <div class="eq-row">
+    <span id="eq-color-label" class="eq-row-label">{initialCopy.colorLabel}</span>
+    {QUOTE_THEME_PRESETS.map((preset, index) => (
+      <button
+        type="button"
+        data-theme-id={preset.id}
+        data-name-id={preset.nameId}
+        data-name-en={preset.nameEn}
+        class:list={['eq-btn eq-theme-btn', index === 0 && 'is-active']}
+      >
+        {initialLocale === 'en' ? preset.nameEn : preset.nameId}
+      </button>
+    ))}
+  </div>
+
+  <div class="eq-row">
+    <button id="eq-upload-btn" type="button" class="eq-btn">
+      {initialCopy.uploadBtn}
+    </button>
+    <button id="eq-random-btn" type="button" class="eq-btn">
+      {initialCopy.randomBtn}
+    </button>
+    <button id="eq-clear-bg-btn" type="button" class="eq-btn">
+      {initialCopy.clearBgBtn}
+    </button>
+    <button id="eq-reset-btn" type="button" class="eq-btn">
+      {initialCopy.resetBtn}
+    </button>
+    <button id="eq-download-btn" type="button" class="eq-btn eq-btn-primary">
+      {initialCopy.downloadBtn}
+    </button>
+  </div>
+
+  <input
+    id="eq-file-input"
+    type="file"
+    accept="image/jpeg,image/png,image/webp"
+    class="eq-sr-only"
+  />
+
+  <div class="eq-preview-wrap">
+    <canvas
+      id="eq-canvas"
+      width="1080"
+      height="1080"
+      class="eq-canvas"
+    ></canvas>
+  </div>
+</section>
+
+<style>
+  .eq-card,
+  .eq-card * {
+    box-sizing: border-box;
+  }
+
+  .eq-card {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 1.25rem;
+    border: 1px solid rgba(24, 28, 34, 0.16);
+    border-radius: 14px;
+    background: #ffffff;
+    color: #181c22;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .eq-topbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .eq-lang-switch {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  .eq-lang-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .eq-status {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #4b5563;
+  }
+
+  .eq-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .eq-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #181c22;
+  }
+
+  .eq-textarea,
+  .eq-input {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid rgba(24, 28, 34, 0.22);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    background: #ffffff;
+    color: #181c22;
+  }
+
+  .eq-textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+
+  .eq-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .eq-row-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+
+  .eq-btn {
+    padding: 0.5rem 0.85rem;
+    border: 1px solid rgba(24, 28, 34, 0.22);
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #181c22;
+    font-family: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .eq-btn:hover {
+    background: #eef2f6;
+  }
+
+  .eq-btn.is-active {
+    background: #181c22;
+    color: #ffffff;
+    border-color: #181c22;
+    font-weight: 600;
+  }
+
+  .eq-btn-primary {
+    background: #181c22;
+    color: #ffffff;
+    border-color: #181c22;
+    font-weight: 600;
+  }
+
+  .eq-btn-primary:hover {
+    background: #2b323d;
+  }
+
+  .eq-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .eq-preview-wrap {
+    margin-top: 0.25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .eq-canvas {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    border: 1px solid rgba(24, 28, 34, 0.16);
+  }
+</style>
+
+<script>
+  import {
+    QUOTE_THEME_PRESETS,
+    QUOTE_UI_COPY,
+    cleanupBlobUrl,
+    drawQuotePoster,
+    getNextRandomImage,
+    loadImageSafe,
+    type EphemeralQuoteState,
+    type QuoteLocale,
+  } from '../lib/ephemeralQuote';
+
+  const MAX_SIZE_BYTES = 8 * 1024 * 1024;
+
+  const boxEl = document.getElementById('ephemeral-quote-box') as HTMLElement | null;
+  const quoteEl = document.getElementById('eq-quote') as HTMLTextAreaElement | null;
+  const quoteLabelEl = document.getElementById('eq-quote-label') as HTMLLabelElement | null;
+  const authorEl = document.getElementById('eq-author') as HTMLInputElement | null;
+  const authorLabelEl = document.getElementById('eq-author-label') as HTMLLabelElement | null;
+  const colorLabelEl = document.getElementById('eq-color-label') as HTMLSpanElement | null;
+  const fileEl = document.getElementById('eq-file-input') as HTMLInputElement | null;
+  const uploadBtn = document.getElementById('eq-upload-btn') as HTMLButtonElement | null;
+  const randomBtn = document.getElementById('eq-random-btn') as HTMLButtonElement | null;
+  const clearBgBtn = document.getElementById('eq-clear-bg-btn') as HTMLButtonElement | null;
+  const resetBtn = document.getElementById('eq-reset-btn') as HTMLButtonElement | null;
+  const downloadBtn = document.getElementById('eq-download-btn') as HTMLButtonElement | null;
+  const statusEl = document.getElementById('eq-status') as HTMLParagraphElement | null;
+  const canvasEl = document.getElementById('eq-canvas') as HTMLCanvasElement | null;
+  const themeButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.eq-theme-btn'));
+  const langButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('.eq-lang-btn'));
+
+  function detectInitialLocale(): QuoteLocale {
+    const attrLocale = boxEl?.dataset.initialLocale;
+    if (attrLocale === 'en' || attrLocale === 'id') return attrLocale;
+    return window.location.pathname.startsWith('/id') ? 'id' : 'en';
+  }
+
+  let currentLocale: QuoteLocale = detectInitialLocale();
+  let lastStatusKey: keyof (typeof QUOTE_UI_COPY)['id'] = 'ephemeralNotice';
+
+  let state: EphemeralQuoteState = {
+    quote: '',
+    author: '',
+    themeId: QUOTE_THEME_PRESETS[0].id,
+    bgMode: 'none',
+    bgUrl: null,
+  };
+
+  let loadedBgImg: HTMLImageElement | null = null;
+  let loadCounter = 0;
+
+  function getCopy() {
+    return QUOTE_UI_COPY[currentLocale];
+  }
+
+  function applyStatusKey(key: keyof (typeof QUOTE_UI_COPY)['id']) {
+    lastStatusKey = key;
+    if (statusEl) {
+      statusEl.textContent = getCopy()[key];
+    }
+  }
+
+  function syncLocaleUi() {
+    const copy = getCopy();
+    if (quoteLabelEl) quoteLabelEl.textContent = copy.quoteLabel;
+    if (quoteEl) quoteEl.placeholder = copy.quotePlaceholder;
+    if (authorLabelEl) authorLabelEl.textContent = copy.authorLabel;
+    if (authorEl) authorEl.placeholder = copy.authorPlaceholder;
+    if (colorLabelEl) colorLabelEl.textContent = copy.colorLabel;
+    if (uploadBtn) uploadBtn.textContent = copy.uploadBtn;
+    if (randomBtn) randomBtn.textContent = copy.randomBtn;
+    if (clearBgBtn) clearBgBtn.textContent = copy.clearBgBtn;
+    if (resetBtn) resetBtn.textContent = copy.resetBtn;
+    if (downloadBtn) downloadBtn.textContent = copy.downloadBtn;
+
+    themeButtons.forEach((btn) => {
+      btn.textContent =
+        currentLocale === 'en' ? btn.dataset.nameEn ?? '' : btn.dataset.nameId ?? '';
+    });
+
+    langButtons.forEach((btn) => {
+      btn.classList.toggle('is-active', btn.dataset.lang === currentLocale);
+    });
+
+    applyStatusKey(lastStatusKey);
+  }
+
+  function getCurrentTheme() {
+    return QUOTE_THEME_PRESETS.find((item) => item.id === state.themeId) ?? QUOTE_THEME_PRESETS[0];
+  }
+
+  function render() {
+    if (!canvasEl) return;
+    drawQuotePoster(canvasEl, state, getCurrentTheme(), loadedBgImg, getCopy().quoteCanvasPlaceholder);
+  }
+
+  async function applyBackground(url: string | null, mode: 'none' | 'upload' | 'random') {
+    const token = ++loadCounter;
+
+    if (!url || mode === 'none') {
+      cleanupBlobUrl(state.bgUrl);
+      loadedBgImg = null;
+      state = { ...state, bgMode: 'none', bgUrl: null };
+      render();
+      return;
+    }
+
+    cleanupBlobUrl(state.bgUrl);
+    state = { ...state, bgMode: mode, bgUrl: url };
+    applyStatusKey(mode === 'random' ? 'loadingRandom' : 'loadingUpload');
+
+    try {
+      const img = await loadImageSafe(url, mode === 'random');
+      if (token !== loadCounter) return;
+      loadedBgImg = img;
+      render();
+      applyStatusKey(mode === 'random' ? 'loadedRandom' : 'loadedUpload');
+    } catch {
+      if (token !== loadCounter) return;
+      cleanupBlobUrl(url);
+      loadedBgImg = null;
+      state = { ...state, bgMode: 'none', bgUrl: null };
+      render();
+      applyStatusKey('loadFailed');
+    }
+  }
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const nextLang = btn.dataset.lang === 'en' ? 'en' : 'id';
+      if (nextLang === currentLocale) return;
+      currentLocale = nextLang;
+      syncLocaleUi();
+      render();
+    });
+  });
+
+  quoteEl?.addEventListener('input', (e) => {
+    state = { ...state, quote: (e.target as HTMLTextAreaElement).value };
+    render();
+  });
+
+  authorEl?.addEventListener('input', (e) => {
+    state = { ...state, author: (e.target as HTMLInputElement).value };
+    render();
+  });
+
+  themeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.themeId;
+      if (!id) return;
+      state = { ...state, themeId: id };
+      themeButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
+      render();
+    });
+  });
+
+  uploadBtn?.addEventListener('click', () => {
+    fileEl?.click();
+  });
+
+  fileEl?.addEventListener('change', (e) => {
+    const input = e.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      applyStatusKey('invalidFileType');
+      input.value = '';
+      return;
+    }
+
+    if (file.size > MAX_SIZE_BYTES) {
+      applyStatusKey('fileTooLarge');
+      input.value = '';
+      return;
+    }
+
+    const blobUrl = URL.createObjectURL(file);
+    void applyBackground(blobUrl, 'upload');
+    input.value = '';
+  });
+
+  randomBtn?.addEventListener('click', () => {
+    const nextUrl = getNextRandomImage(state.bgUrl);
+    if (!nextUrl) {
+      applyStatusKey('emptyRandomPool');
+      return;
+    }
+    void applyBackground(nextUrl, 'random');
+  });
+
+  clearBgBtn?.addEventListener('click', () => {
+    void applyBackground(null, 'none');
+    applyStatusKey('bgCleared');
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    cleanupBlobUrl(state.bgUrl);
+    loadedBgImg = null;
+    state = {
+      quote: '',
+      author: '',
+      themeId: QUOTE_THEME_PRESETS[0].id,
+      bgMode: 'none',
+      bgUrl: null,
+    };
+    if (quoteEl) quoteEl.value = '';
+    if (authorEl) authorEl.value = '';
+    if (fileEl) fileEl.value = '';
+    themeButtons.forEach((b, idx) => b.classList.toggle('is-active', idx === 0));
+    render();
+    applyStatusKey('allReset');
+  });
+
+  downloadBtn?.addEventListener('click', () => {
+    if (!canvasEl) return;
+    try {
+      const link = document.createElement('a');
+      link.download = getCopy().downloadFilename;
+      link.href = canvasEl.toDataURL('image/png');
+      link.click();
+    } catch {
+      applyStatusKey('corsDownloadError');
+    }
+  });
+
+  window.addEventListener('beforeunload', () => {
+    cleanupBlobUrl(state.bgUrl);
+  });
+
+  syncLocaleUi();
+  render();
+</script>
