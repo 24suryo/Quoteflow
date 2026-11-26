@@ -1,4 +1,4 @@
-import type { Locale } from '../types';
+﻿import type { Locale } from '../types';
 
 export const DEFAULT_LOCALE: Locale = 'en';
 
@@ -31,7 +31,7 @@ export const UI_STRINGS = {
       popularTitle: 'Popular Reflections',
       articlesTitle: 'Latest from the Journal',
       ctaTitle: 'Turn meaningful words into shareable art.',
-      ctaSubtitle: 'Create high-resolution posters for Instagram, Stories, and desktop wallpapers—free and offline-ready.',
+      ctaSubtitle: 'Create high-resolution posters for Instagram, Stories, and desktop wallpapersâ€”free and offline-ready.',
       ctaButton: 'Start Creating Now',
     },
     actions: {
@@ -82,7 +82,7 @@ export const UI_STRINGS = {
       popularTitle: 'Kutipan Populer',
       articlesTitle: 'Artikel Jurnal Terbaru',
       ctaTitle: 'Ubah kata bermakna menjadi karya visual.',
-      ctaSubtitle: 'Buat poster resolusi tinggi untuk Instagram, Story, dan wallpaper—gratis dan dapat diakses offline.',
+      ctaSubtitle: 'Buat poster resolusi tinggi untuk Instagram, Story, dan wallpaperâ€”gratis dan dapat diakses offline.',
       ctaButton: 'Mulai Membuat Sekarang',
     },
     actions: {
@@ -118,3 +118,47 @@ export function getLocalizedPath(locale: Locale, path: string): string {
   }
   return cleanPath === '/' ? '/id/' : `/id${cleanPath}`;
 }
+
+// AUTO_ADDED_QUOTES_START
+export const EXTRA_BILINGUAL_QUOTES = [
+  {
+    id: 'qf-extra-01',
+    slug: 'steady-momentum',
+    quote: {
+      en: 'Steady momentum is built in quiet hours when nobody is watching.',
+      id: 'Momentum yang kokoh dibangun di jam-jam tenang saat tidak ada yang melihat.',
+    },
+    author: 'QuoteFlow',
+    category: {
+      name: { en: 'Discipline', id: 'Disiplin' },
+      slug: { en: 'discipline', id: 'disiplin' },
+    },
+  },
+  {
+    id: 'qf-extra-02',
+    slug: 'clear-next-step',
+    quote: {
+      en: 'You do not need the whole staircase—just the next honest step.',
+      id: 'Kamu tidak butuh seluruh tangga—cukup satu langkah jujur berikutnya.',
+    },
+    author: 'QuoteFlow',
+    category: {
+      name: { en: 'Clarity', id: 'Kejelasan' },
+      slug: { en: 'clarity', id: 'kejelasan' },
+    },
+  },
+  {
+    id: 'qf-extra-03',
+    slug: 'calm-execution',
+    quote: {
+      en: 'Calm execution beats frantic effort every single time.',
+      id: 'Eksekusi yang tenang selalu mengalahkan usaha yang terburu-buru.',
+    },
+    author: 'QuoteFlow',
+    category: {
+      name: { en: 'Focus', id: 'Fokus' },
+      slug: { en: 'focus', id: 'fokus' },
+    },
+  },
+];
+// AUTO_ADDED_QUOTES_END

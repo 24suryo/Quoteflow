@@ -87,6 +87,100 @@ import EphemeralQuoteBox from '../components/EphemeralQuoteBox.astro';
       });
     })();
   </script>
+<!-- QF_ONLINE_FETCH_START -->
+  <script is:inline>
+    (function () {
+      const panels = document.querySelectorAll('.qf-panel');
+      const libraryPanel = panels && panels.length > 0 ? panels[0] : null;
+      if (!libraryPanel) return;
+
+      const targetContainer = libraryPanel.querySelector('.qf-panel-body') || libraryPanel;
+      if (targetContainer.querySelector('.qf-online-bar')) return;
+
+      const bar = document.createElement('div');
+      bar.className = 'qf-online-bar';
+      bar.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:0.6rem;margin-bottom:0.9rem;flex-wrap:wrap;';
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'qf-online-btn';
+      btn.textContent = '↻ Fetch Online Quote';
+      btn.style.cssText = 'padding:0.48rem 0.9rem;border-radius:8px;border:1px solid #181c22;background:#181c22;color:#ffffff;font-size:0.82rem;font-weight:600;cursor:pointer;transition:opacity 0.15s ease;';
+
+      const status = document.createElement('span');
+      status.className = 'qf-online-status';
+      status.style.cssText = 'font-size:0.75rem;color:#6b7280;';
+      status.textContent = 'dummyjson.com';
+
+      bar.appendChild(btn);
+      bar.appendChild(status);
+      targetContainer.prepend(bar);
+
+      const fallbackQuotes = [
+          { quote: 'Steady momentum is built in quiet hours when nobody is watching.', author: 'QuoteFlow' },
+          { quote: 'You do not need the whole staircase—just the next honest step.', author: 'QuoteFlow' },
+          { quote: 'Calm execution beats frantic effort every single time.', author: 'QuoteFlow' },
+          { quote: 'Clarity arrives when distractions are quietly set aside.', author: 'QuoteFlow' }
+        ];
+
+      function applyQuoteToDom(quoteText, authorName) {
+        const quoteEl = targetContainer.querySelector('blockquote, [data-quote-text], .quote-text, #gen-quote-text');
+        const authorEl = targetContainer.querySelector('[data-quote-author], .quote-author, #gen-quote-author, cite');
+
+        if (quoteEl) {
+          quoteEl.textContent = '"' + quoteText + '"';
+        }
+        if (authorEl) {
+          authorEl.textContent = '— ' + (authorName || 'QuoteFlow');
+        }
+      }
+
+      async function handleFetchQuote() {
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        const originalText = btn.textContent;
+        btn.textContent = 'Fetching...';
+
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 5000);
+
+          const response = await fetch('https://dummyjson.com/quotes/random', {
+            signal: controller.signal,
+            headers: { Accept: 'application/json' },
+          });
+          clearTimeout(timeout);
+
+          if (!response.ok) throw new Error('Request failed: ' + response.status);
+          const payload = await response.json();
+
+          if (!payload || !payload.quote) {
+            throw new Error('Empty quote payload');
+          }
+
+          if ('en' === 'id') {
+            const pick = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+            applyQuoteToDom(pick.quote, pick.author);
+            status.textContent = 'Fallback • Curated EN';
+          } else {
+            applyQuoteToDom(payload.quote, payload.author || 'QuoteFlow');
+            status.textContent = 'Live • dummyjson.com';
+          }
+        } catch (err) {
+          const pick = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+          applyQuoteToDom(pick.quote, pick.author);
+          status.textContent = 'Fallback • Curated EN';
+        } finally {
+          btn.disabled = false;
+          btn.style.opacity = '1';
+          btn.textContent = originalText;
+        }
+      }
+
+      btn.addEventListener('click', handleFetchQuote);
+    })();
+  </script>
+<!-- QF_ONLINE_FETCH_END -->
 </BaseLayout>
 
 <style>
@@ -188,3 +282,4 @@ import EphemeralQuoteBox from '../components/EphemeralQuoteBox.astro';
     box-sizing: border-box;
   }
 </style>
+
